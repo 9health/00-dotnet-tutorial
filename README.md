@@ -5,6 +5,7 @@ A .NET tutorial
 
 - Windows 10
 - .NET 6.0
+- [Git Client](https://git-scm.com/downloads) 
 
 # How to run
 
