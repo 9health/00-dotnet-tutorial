@@ -1,6 +1,10 @@
 # dotnet-tutorial
 A .NET tutorial
 
+# References
+
+[[microsoft.com] .NET Tutorial - Hello World in 5 minutes](https://dotnet.microsoft.com/en-us/learn/dotnet/hello-world-tutorial/intro)
+
 # Preparations
 
 - Windows 10
@@ -238,7 +242,3 @@ WPF Custom Cont...  wpfcustomcontrollib  [C#],VB     Common/WPF
 WPF User Contro...  wpfusercontrollib    [C#],VB     Common/WPF
 xUnit Test Project  xunit                [C#],F#,VB  Test/xUnit
 ```
-
-# References
-
-[[microsoft.com] .NET Tutorial - Hello World in 5 minutes](https://dotnet.microsoft.com/en-us/learn/dotnet/hello-world-tutorial/intro)
