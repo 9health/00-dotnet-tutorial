@@ -28,9 +28,6 @@ Sum from 1 to 10 is 55
 # Other Notes
 
 ## Temporary files
-
-**It shoule be excluded before commiting to Git repository!**
-
 ```
 $ find obj/ bin/
 obj/
@@ -67,7 +64,8 @@ bin/Debug/net6.0/MyApp.exe
 bin/Debug/net6.0/MyApp.pdb
 bin/Debug/net6.0/MyApp.runtimeconfig.json
 ```
-
+* It shoule be excluded before commiting to Git repository!
+* **Tips**: Add [Visual Studio .gitignore template](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore) while [creating repository on GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)!
 ## Main program file
 
 There is no main program in the source code, please refer this [link](https://aka.ms/new-console-template).
