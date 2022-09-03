@@ -242,6 +242,7 @@ WPF Custom Control Library                    wpfcustomcontrollib  [C#],VB     C
 WPF User Control Library                      wpfusercontrollib    [C#],VB     Common/WPF
 xUnit Test Project                            xunit                [C#],F#,VB  Test/xUnit
 ```
+```
 - The following example creates a .sln file in the specified folder, with the same name as the folder:
 
 $ dotnet new sln --output MySolution
@@ -254,3 +255,4 @@ dotnet new classlib -o mylib2
 dotnet sln mysolution.sln add myapp\myapp.csproj
 dotnet sln mysolution.sln add mylib1\mylib1.csproj --solution-folder mylibs
 dotnet sln mysolution.sln add mylib2\mylib2.csproj --solution-folder mylibs
+```
