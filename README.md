@@ -66,6 +66,11 @@ bin/Debug/net6.0/MyApp.runtimeconfig.json
 ```
 * It shoule be excluded before commiting to Git repository!
 * **Tips**: Add [Visual Studio .gitignore template](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore) while [creating repository on GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)!
+
+## Setting development environment
+
+* Refer to this [gist](https://gist.github.com/9health/6c004b42a0e5146c0c2accd21b79e415) for more information.
+
 ## Main program file
 
 There is no main program in the source code, please refer this [link](https://aka.ms/new-console-template).
