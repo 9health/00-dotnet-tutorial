@@ -242,3 +242,25 @@ WPF Custom Control Library                    wpfcustomcontrollib  [C#],VB     C
 WPF User Control Library                      wpfusercontrollib    [C#],VB     Common/WPF
 xUnit Test Project                            xunit                [C#],F#,VB  Test/xUnit
 ```
+```
+- The following example creates a .sln file in the specified folder, with the same name as the folder:
+
+$ dotnet new sln --output MySolution
+
+- Create a solution, a console app, and two class libraries. Add the projects to the solution, and use the --solution-folder option of dotnet sln to organize the class libraries into a solution folder.
+
+$ dotnet new sln -n mysolution
+$ dotnet new console -o myapp
+$ dotnet new classlib -o mylib1
+$ dotnet new classlib -o mylib2
+$ dotnet sln mysolution.sln add myapp\myapp.csproj
+$ dotnet sln mysolution.sln add mylib1\mylib1.csproj --solution-folder mylibs
+$ dotnet sln mysolution.sln add mylib2\mylib2.csproj --solution-folder mylibs
+
+-Start Solution in VS : This will open whatever version of Visual Studio you currently have set to open with .sln files in Windows.
+
+$ start MySolution/MySolution.sln and hit Enter.
+
+
+
+```
