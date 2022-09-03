@@ -32,4 +32,18 @@ public class Person: object
     {
         return Procreate(p1, p2);
     }
+    // method with a local function
+    public static int Factorial(int number)
+    {
+        if (number < 0)
+        {
+            throw new ArgumentException($"{nameof(number)} cannot < 0");
+        }
+        return localFactorial(number);
+        int localFactorial(int localNumber)  //local function
+        {
+            if (localNumber < 1) return 1;
+            return localNumber * localFactorial(localNumber - 1);
+        }
+    }
 }
