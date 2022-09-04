@@ -1,4 +1,4 @@
-﻿
+﻿using AbstractClassesVsInterface;
 using Packt.Shared;
 using static System.Console;
 
@@ -100,3 +100,38 @@ DisplacementVector dv1 = new(3, 5);
 DisplacementVector dv2 = new(-2, 7);
 DisplacementVector dv3 = dv1 + dv2;
 WriteLine($"({dv1.X}, {dv1.Y}) + ({dv2.X}, {dv2.Y}) = ({dv3.X}, {dv3.Y})");
+
+//inheriting from classes
+Employee john = new()
+{
+    Name = "John Jones",
+    DateOfBirth = new(year: 1990, month: 7, day: 28)
+};
+john.WriteToConsole();
+
+//Extending classes to add functionality
+john.EmployeeCode = "JJ001";
+john.HireDate = new(year: 2014, month: 11, day: 23);
+WriteLine($"{john.Name} was hired on {john.HireDate:dd/MM/yy}");
+
+//overriding members
+WriteLine(john.ToString());
+
+
+// inheriting from abstract classes
+
+FullyImplemented a = new();
+// all the other types give compile errors
+//PartiallyImplemented b = new(); // compile error!
+//ISomeImplementation c = new(); // compile error!
+//INoImplementation d = new(); // compile error!
+
+// Understanding polymorphism
+Employee aliceInEmployee = new()
+{ Name = "Alice", EmployeeCode = "AA123" };
+Person aliceInPerson = aliceInEmployee;
+
+aliceInEmployee.WriteToConsole();
+aliceInPerson.WriteToConsole();
+WriteLine(aliceInEmployee.ToString());
+WriteLine(aliceInPerson.ToString());

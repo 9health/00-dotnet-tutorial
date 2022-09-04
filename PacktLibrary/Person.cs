@@ -15,7 +15,7 @@ public class Person: object, IComparable<Person>
     public static Person Procreate(Person p1, Person p2)
     {
         Person baby = new()
-        {
+        {   
             Name = $"Baby of {p1.Name} and {p2.Name}"
         };
         p1.Children.Add(baby);
@@ -69,5 +69,10 @@ public class Person: object, IComparable<Person>
     {
         if (Name is null) return 0;
         return Name.CompareTo(other?.Name);
+    }
+
+    public override string ToString()
+    {
+        return $"{Name} is a {base.ToString()}";
     }
 }

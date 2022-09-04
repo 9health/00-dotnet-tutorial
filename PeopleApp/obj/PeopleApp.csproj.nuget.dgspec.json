@@ -4,6 +4,61 @@
     "G:\\tryCS\\Code\\Chapter06\\PeopleApp\\PeopleApp.csproj": {}
   },
   "projects": {
+    "G:\\tryCS\\Code\\Chapter06\\InheritingAbstractClasses\\InheritingAbstractClasses.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\tryCS\\Code\\Chapter06\\InheritingAbstractClasses\\InheritingAbstractClasses.csproj",
+        "projectName": "InheritingAbstractClasses",
+        "projectPath": "G:\\tryCS\\Code\\Chapter06\\InheritingAbstractClasses\\InheritingAbstractClasses.csproj",
+        "packagesPath": "C:\\Users\\9Health\\.nuget\\packages\\",
+        "outputPath": "G:\\tryCS\\Code\\Chapter06\\InheritingAbstractClasses\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\9Health\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "G:\\tryCS\\Code\\Chapter06\\PacktLibrary\\PacktLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -83,6 +138,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "G:\\tryCS\\Code\\Chapter06\\InheritingAbstractClasses\\InheritingAbstractClasses.csproj": {
+                "projectPath": "G:\\tryCS\\Code\\Chapter06\\InheritingAbstractClasses\\InheritingAbstractClasses.csproj"
+              },
               "G:\\tryCS\\Code\\Chapter06\\PacktLibrary\\PacktLibrary.csproj": {
                 "projectPath": "G:\\tryCS\\Code\\Chapter06\\PacktLibrary\\PacktLibrary.csproj"
               }

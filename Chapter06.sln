@@ -1,21 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleApp", "PeopleApp\PeopleApp.csproj", "{6C862CA5-29B7-4755-9A97-DCA8262ADC2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleApp", "PeopleApp\PeopleApp.csproj", "{6C862CA5-29B7-4755-9A97-DCA8262ADC2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacktLibrary", "PacktLibrary\PacktLibrary.csproj", "{E7EF5A47-4E84-45C9-9810-BD0FA9F04057}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PacktLibrary", "PacktLibrary\PacktLibrary.csproj", "{E7EF5A47-4E84-45C9-9810-BD0FA9F04057}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullHandling", "NullHandling\NullHandling.csproj", "{7D6277FE-3302-4994-90C2-7C5EAAAB35C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullHandling", "NullHandling\NullHandling.csproj", "{7D6277FE-3302-4994-90C2-7C5EAAAB35C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritingAbstractClasses", "InheritingAbstractClasses\InheritingAbstractClasses.csproj", "{0835F152-2543-4E18-8FCF-91D61C51BA0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6C862CA5-29B7-4755-9A97-DCA8262ADC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +29,15 @@ Global
 		{7D6277FE-3302-4994-90C2-7C5EAAAB35C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D6277FE-3302-4994-90C2-7C5EAAAB35C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D6277FE-3302-4994-90C2-7C5EAAAB35C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0835F152-2543-4E18-8FCF-91D61C51BA0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0835F152-2543-4E18-8FCF-91D61C51BA0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0835F152-2543-4E18-8FCF-91D61C51BA0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0835F152-2543-4E18-8FCF-91D61C51BA0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDF2C412-4E94-46CB-9046-F712A863D427}
 	EndGlobalSection
 EndGlobal

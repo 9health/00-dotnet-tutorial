@@ -8,6 +8,7 @@
   </PropertyGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\PacktLibrary\PacktLibrary.csproj" />
+		<ProjectReference Include="..\InheritingAbstractClasses\InheritingAbstractClasses.csproj" />
 	</ItemGroup>
 
 </Project>
