@@ -135,3 +135,46 @@ aliceInEmployee.WriteToConsole();
 aliceInPerson.WriteToConsole();
 WriteLine(aliceInEmployee.ToString());
 WriteLine(aliceInPerson.ToString());
+
+//Casting within inheritance hierarchies
+// explicit casting
+//if (aliceInPerson is Employee)//check the type of an object 
+//{
+//    WriteLine($"{nameof(aliceInPerson)} IS an Employee");
+//    Employee explicitAlice = (Employee)aliceInPerson;
+//} 
+
+if (aliceInPerson is Employee explicitAlice)
+{
+    WriteLine($"{nameof(aliceInPerson)} IS an Employee");
+}
+
+
+Employee? aliceAsEmployee = aliceInPerson as Employee;
+if (aliceAsEmployee != null)
+{
+    WriteLine($"{nameof(aliceInPerson)} AS an Employee");
+}
+
+//inheriting exceptions
+try
+{
+    john.TimeTravel(when: new(1999, 12, 31));
+    john.TimeTravel(when: new(1950, 12, 25));
+
+}
+catch(PersonException ex)
+{
+    WriteLine(ex.Message);
+}
+
+//Using static methods to reuse functionality
+
+string email1 = "vuvietquang90@gmail.com";
+string email2 = "ian&test.com";
+WriteLine("{0} is a valid e-mail address: {1}",
+  arg0: email1,
+  arg1: email1.IsValidEmail()); //extenstions
+WriteLine("{0} is a valid e-mail address: {1}",
+  arg0: email2,
+  arg1: email2.IsValidEmail()); // extenstions
