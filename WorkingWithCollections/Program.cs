@@ -1,10 +1,11 @@
 ﻿using System.Reflection.PortableExecutable;
 using static System.Console;
+using System.Collections.Immutable;
 
-//WorkingWithLists();
+WorkingWithLists();
 //WorkingWithDictionaries();
 //WorkingWithQueues();
-WorkingWithPriorityQueues();
+//WorkingWithPriorityQueues();
 
 static void Output(string title, IEnumerable<string> collection)
 {
@@ -40,6 +41,12 @@ static void WorkingWithLists()
     cities.RemoveAt(1);
     cities.Remove("Milan");
     Output("After remove", cities);
+
+    // immutable lists
+    ImmutableList<string> immutableCities = cities.ToImmutableList();
+    ImmutableList<string> newList = immutableCities.Add("Rio");
+    Output("Immutable list of cities:", immutableCities);
+    Output("New list of cities:", newList);
 }
 
 //WorkingWithDictionaries 
@@ -120,7 +127,7 @@ static void WorkingWithPriorityQueues()
     vaccine.Enqueue("Pamela", 1);
     vaccine.Enqueue("Rebecca", 2);
     vaccine.Enqueue("Juliet", 3);
-    vaccine.Enqueue("Ian", 1);
+    vaccine.Enqueue("Ian", 4);
     OutputPQ("Current queue for vaccination:", vaccine.UnorderedItems);
     WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
     WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
@@ -130,3 +137,4 @@ static void WorkingWithPriorityQueues()
     WriteLine($"{vaccine.Peek()} will be next to be vaccinated.");
     OutputPQ("Current queue for vaccination:", vaccine.UnorderedItems);
 }
+
