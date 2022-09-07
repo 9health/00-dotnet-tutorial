@@ -45,10 +45,6 @@ foreach (Type type in types)
         }
     }
 }
-
-
-
-
 class Animal
 {
     [Coder("Mark Price", "22 August 2022")]
