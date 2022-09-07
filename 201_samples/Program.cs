@@ -11,14 +11,14 @@ public class _201_samples {
     // Test nullable type int?
     public static void _01_test_nullable() {
 
-        int  a;
-        int? ax;
+        int  food_id;
+        int? food_id_x;
 
-        a = 4;
-        Console.WriteLine($"a = {a}. Expect a = 4");
+        food_id = 4;
+        Console.WriteLine($"food_id = {food_id}. Expect food_id = 4");
 
-        ax = null;
-        Console.WriteLine($"ax = {ax}. Expect ax = (null)");
+        food_id_x = null;
+        Console.WriteLine($"food_id_x = {food_id_x}. Expect food_id_x = (null)");
 
     }
 
