@@ -6,7 +6,8 @@ using tryCsEx;
 
 //OutputFileSystemInfo();
 //WorkWithDrives();
-WorkWithDirectories();
+//WorkWithDirectories();
+WorkWithFiles();
 
 static void OutputFileSystemInfo()
 {
@@ -67,4 +68,55 @@ static void WorkWithDirectories()
     {
         CreateDirectory(newFolder);
     }
+}
+
+static void WorkWithFiles()
+{
+    string dir = Combine(GetFolderPath(SpecialFolder.Personal), "Code", "Chapter09", "OutputFiles");
+    CreateDirectory(dir);
+    string file = Combine(dir, "Dummy.txt");
+    string backup = Combine(dir, "Dummy.bak");
+    // create a new text file and write a line to it
+    StreamWriter text = File.CreateText(file);
+    text.WriteLine("Hello C#");
+    text.Close(); // close file and release resources
+    WriteLine($"Does it exist? {File.Exists(file)}");
+    // copy the file, and overwrite if it already exists
+    File.Copy(sourceFileName: file, destFileName: backup, overwrite: true);
+    WriteLine($"Does {backup} exist? {File.Exists(backup)}");
+    Write("Confirm the files exist, and then press ENTER: ");
+    ReadLine();
+    // delete file
+    File.Delete(file);
+    WriteLine($"Does it exist? {File.Exists(file)}");
+    // read from the text file backup
+    WriteLine($"Reading contents of {backup}:");
+    // my sol:
+    WriteLine(File.ReadAllText(backup));
+    StreamReader textReader = File.OpenText(backup);
+    WriteLine(textReader.ReadToEnd());
+    textReader.Close();
+
+    // Managing paths
+    WriteLine($"Folder Name: {GetDirectoryName(file)}");
+    WriteLine($"File Name: {GetFileName(file)}");
+    WriteLine("File Name without Extension: {0}",
+      GetFileNameWithoutExtension(file));
+    WriteLine($"File Extension: {GetExtension(file)}");
+    WriteLine($"Random File Name: {GetRandomFileName()}");
+    WriteLine($"Temporary File Name: {GetTempFileName()}");
+
+    //getting file information
+    FileInfo info = new(backup);
+    WriteLine($"{backup}:");
+    WriteLine($"Contains {info.Length} bytes");
+    WriteLine($"Last accessed {info.LastAccessTime}");
+    WriteLine($"Has readonly set to {info.IsReadOnly}");
+
+    FileStream aFile = File.Open(backup,FileMode.Open, FileAccess.Read, FileShare.Read);
+    aFile.Close();
+
+    FileInfo anInfo = new(backup);
+    WriteLine("Is the backup file compressed? {0}",
+      anInfo.Attributes.HasFlag(FileAttributes.Compressed));
 }
