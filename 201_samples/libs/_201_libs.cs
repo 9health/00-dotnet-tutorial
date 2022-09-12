@@ -58,5 +58,15 @@ public class _201_libs {
         Console.WriteLine();
     }
 
+    public static void PrintValues(MealVerB meal)
+    {
+        foreach (var food in meal)
+        {
+            Console.Write("\t{0}", food);
+        }
+        Console.WriteLine();
+    }
+
+
 }
 

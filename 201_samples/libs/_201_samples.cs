@@ -176,5 +176,38 @@ public class _201_samples {
         _201_libs.PrintValues(myMeal.FoodTimeMedium);
     }
 
+    // Try iterators with page
+    public static void _41_test_iterators_page() {
+
+        var myMeal = new MealVerB();
+
+        myMeal.AddFood( 1, "Trung ran"       , 10 ) ;
+        myMeal.AddFood( 2, "Rau cai xao"     , 15 ) ;
+        myMeal.AddFood( 3, "Thit luoc"       , 20 ) ;
+        myMeal.AddFood( 4, "Nuoc mam"        , 4  ) ;
+        myMeal.AddFood( 5, "Rau muong luoc"  , 20 ) ;
+        myMeal.AddFood( 6, "Dau phu luoc"    , 5  ) ;
+        myMeal.AddFood( 7, "Nem ran"         , 60 ) ;
+        myMeal.AddFood( 8, "Cha cuon la lot" , 30 ) ;
+        myMeal.AddFood( 9, "Thanh long"      , 10 ) ;
+        myMeal.AddFood(10, "Banh kem"        , 40 ) ;
+
+        Console.WriteLine("Top 3:");
+        _201_libs.PrintValues(myMeal.TopN(3));
+
+        Console.WriteLine("Top 4:");
+        _201_libs.PrintValues(myMeal.TopN(4));
+
+        Console.WriteLine("Page 1:");
+        _201_libs.PrintValues(myMeal.PageN(1));
+
+        Console.WriteLine("Page 2:");
+        _201_libs.PrintValues(myMeal.PageN(2));
+
+        Console.WriteLine("Page 3:");
+        _201_libs.PrintValues(myMeal.PageN(3));
+
+    }
+
 }
 
