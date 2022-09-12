@@ -99,5 +99,27 @@ public class _201_samples {
         Console.WriteLine($"food_list.GetType() = {food_list.GetType()}");
     }
 
+    // Try class properties get, set
+    public static void _20_test_class_prop() {
+        NHFoodVerA food1 = new NHFoodVerA(); 
+        NHFoodVerA food2 = new NHFoodVerA(); 
+        NHFoodVerA food3 = new NHFoodVerA(); 
+
+        food1.FoodId    = 1;
+
+        // error CS0122: 'NHFoodVerA._FoodViewsPrv' is inaccessible due to its protection levelk
+        // food1._FoodViewsPrv = 160;
+
+        food1.FoodViewsPbl = 160;
+
+        Console.WriteLine($"food1.FoodViewsPbl = {food1.FoodViewsPbl}");
+
+        // error CS0272: The property or indexer 'NHFoodVerA.FoodViewsPrvSet' cannot be used in this context because the set accessor is inaccessible
+        // food1.FoodViewsPrvSet = 160;
+
+        food1.FoodViewsPrvOK = 160;
+        Console.WriteLine($"food1.FoodViewsPrvOK = {food1.FoodViewsPrvOK}");
+    }
+
 }
 
