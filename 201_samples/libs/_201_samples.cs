@@ -121,5 +121,17 @@ public class _201_samples {
         Console.WriteLine($"food1.FoodViewsPrvOK = {food1.FoodViewsPrvOK}");
     }
 
+    // Try list simple
+    public static void _30_test_list() {
+
+        var food_views_list = new List<int> { 1000, 100, 50, 500000, 1, 2, 3 };
+
+        _201_libs.PrintValues(food_views_list);
+
+        food_views_list.Sort();
+
+        _201_libs.PrintValues(food_views_list);
+
+    }
 }
 

@@ -19,5 +19,16 @@ public class _201_libs {
         Console.WriteLine();
     }
 
+    public static void PrintValues(List<int> myArr)
+    {
+     // foreach (int i in myArr)
+        foreach (var i in myArr)
+        {
+            Console.Write("\t{0}", i);
+        }
+        Console.WriteLine();
+    }
+
+
 }
 

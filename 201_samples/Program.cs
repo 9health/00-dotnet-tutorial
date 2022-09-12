@@ -9,5 +9,6 @@ Console.WriteLine("Hello, World!");
 
 // _201_samples._10_test_array();
 // _201_samples._11_test_var();
-   _201_samples._20_test_class_prop();
+// _201_samples._20_test_class_prop();
+   _201_samples._30_test_list();
 
