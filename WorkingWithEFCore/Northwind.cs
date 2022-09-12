@@ -20,10 +20,10 @@ public class Northwind: DbContext
         }
         else
         {
-            string connection = "Data Source=tcp:192.168.1.5,1433;" +
+            string connection = "Data Source=tcp:***.***.*.*,1433;" +
                         "Initial Catalog=Northwind;" +
                         "User Id=sa;" +
-                        "Password=1Lik39Health!;" +
+                        "Password=********!;" +
                         "Integrated Security = false;" +
                         "MultipleActiveResultSets = true;";
             optionsBuilder.UseSqlServer(connection);
