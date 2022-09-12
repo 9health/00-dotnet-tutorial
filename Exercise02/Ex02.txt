@@ -1,0 +1,49 @@
+1. Instantiating & using DBContext
+- query all categories and their related products
+- Call Methods on the above variable to convert to csv and json
+
+2. Define 'GenerateCsvFile' method : 
+- Parameter's type is the query in step 1
+- define a variable for csv file
+- Instantiating & using a FileStream to CREATE a csv file in current directory
+    - Instantiating & using a StreamWriter as a 'csv' variable to WRITE into that csv file
+        Writing header into 'csv' variable
+        Loop through each Category in a variable representing a query 
+            Loop thru each Product
+                write : category : Id, name, description
+                write : product: Id, name, description
+                write : product: stock, discontinued
+-   WriteLine("{0} contains {1:N0} bytes.",
+    arg0: csvFile,
+    arg1: new FileInfo(csvFile).Length);
+
+3. Define 'GenerateJsonFile' method:
+- Parameter's type is the query in step 1
+- define a variable for json file
+- Instantiating & using a FileStream to CREATE a json file in current directory
+    - Instantiating & using a Utf8JsonWriter type as a 'json' variable to WRITE into that json file. This is instantiated with 2 properties which are : the variable for json creation and set true to an options of indentation 
+Calling a method of Utf8JsonWriter type upon a 'json' var
+        - write a start of json object ()
+        - write a start of an array called ('categories')
+        - Loop through each Category and write the following : 
+		- write start of json object 'category'
+		- write category id (2 paras)
+		- write string : description (2)
+		- write number of products (2)
+		- write start of an array called ('products')
+            - Loop through each Category and write the following : 
+		    - write start of json object 'product'
+		    - write product id (2 paras)
+		    - write string :name of product (2)
+		    - write cost of products (2 paras with a condition of if cost is null then 0 otherwise get it value)
+		    - write stock of products (2 paras with a condition of if stock is null then 0 otherwise get it value)
+		    - write boolean : discontinued or not? (2)
+		    - write end of object 'product'
+		- write end of an array called ('products')
+		- write end of json object 'category'
+        - write a end of an array called ('categories')
+        - write a end of json object ()
+
+  WriteLine("{0} contains {1:N0} bytes.",
+    arg0: jsonFile,
+    arg1: new FileInfo(jsonFile).Length);
