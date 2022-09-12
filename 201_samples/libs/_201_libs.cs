@@ -29,6 +29,15 @@ public class _201_libs {
         Console.WriteLine();
     }
 
+    public static void PrintValues(List<NHFoodVerB> foodList)
+    {
+        foreach (var food in foodList)
+        {
+            Console.Write("\t{0}", food.FoodViews);
+        }
+        Console.WriteLine();
+    }
+
 
 }
 

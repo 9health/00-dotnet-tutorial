@@ -133,5 +133,26 @@ public class _201_samples {
         _201_libs.PrintValues(food_views_list);
 
     }
+
+    // Try list with class 
+    public static void _31_test_list_class() {
+
+        var foodList = new List<NHFoodVerB>();
+
+        // id, time, steps, views, num
+        var food1 = new NHFoodVerB (1, 15, 4, 1,  5);
+        var food2 = new NHFoodVerB (2, 15, 4, 10, 5);
+        var food3 = new NHFoodVerB (3, 15, 4, 5,  5);
+
+        foodList.Add(food1);
+        _201_libs.PrintValues(foodList);
+
+        foodList.Add(food2);
+        _201_libs.PrintValues(foodList);
+
+        foodList.Add(food3);
+        _201_libs.PrintValues(foodList);
+
+    }
 }
 
