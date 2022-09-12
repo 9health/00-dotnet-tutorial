@@ -154,5 +154,27 @@ public class _201_samples {
         _201_libs.PrintValues(foodList);
 
     }
+
+    // Try iterators
+    public static void _40_test_iterators() {
+        var myMeal = new MealVerA();
+
+        myMeal.AddFood( 1, "Trung ran"  , 10 ) ;
+        myMeal.AddFood( 2, "Rau cai xao", 15 ) ;
+        myMeal.AddFood( 3, "Thit luoc"  , 20 ) ;
+        myMeal.AddFood( 4, "Nuoc mam"   , 4  ) ;
+
+        _201_libs.PrintValues(myMeal);
+
+        Console.WriteLine("FoodTimeQuick:");
+        _201_libs.PrintValues(myMeal.FoodTimeQuick);
+
+        Console.WriteLine("FoodTimeLong:");
+        _201_libs.PrintValues(myMeal.FoodTimeLong);
+
+        Console.WriteLine("FoodTimeMedium:");
+        _201_libs.PrintValues(myMeal.FoodTimeMedium);
+    }
+
 }
 

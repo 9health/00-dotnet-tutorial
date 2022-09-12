@@ -1,4 +1,6 @@
 
+using System.Collections;
+
 public class _201_libs {
 
     public static void PrintValues(Object[] myArr)
@@ -38,6 +40,23 @@ public class _201_libs {
         Console.WriteLine();
     }
 
+    public static void PrintValues(MealVerA meal)
+    {
+        foreach (var food in meal)
+        {
+            Console.Write("\t{0}", food);
+        }
+        Console.WriteLine();
+    }
+
+    public static void PrintValues(IEnumerable collection)
+    {
+        foreach (var item in collection)
+        {
+            Console.Write("\t{0}", item);
+        }
+        Console.WriteLine();
+    }
 
 }
 
