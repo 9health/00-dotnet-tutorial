@@ -13,5 +13,6 @@ Console.WriteLine("Hello, World!");
 // _201_samples._30_test_list();
 // _201_samples._31_test_list_class();
 // _201_samples._40_test_iterators();
-   _201_samples._41_test_iterators_page();
+// _201_samples._41_test_iterators_page();
+   _201_samples._50_test_linq();
 

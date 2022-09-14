@@ -209,5 +209,25 @@ public class _201_samples {
 
     }
 
+    // Try simple LINQ
+    public static void _50_test_linq() {
+        var foodSteps = new int[] { 5, 7, 3, 1, 2 };
+
+        var sortQuery = 
+            from steps in foodSteps
+            orderby steps 
+            select steps;
+
+        // Using query expression syntax
+        Console.WriteLine("Food steps sort:");
+        _201_libs.PrintValues(sortQuery);
+
+        var sortQuery2 = foodSteps.OrderBy(steps => steps);
+
+        // Using method-based query syntax
+        Console.WriteLine("Food steps sort using method:");
+        _201_libs.PrintValues(sortQuery);
+    }
+
 }
 
