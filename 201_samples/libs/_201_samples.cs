@@ -1,5 +1,6 @@
 
 using System.Diagnostics;
+using System.Text.Json;
 
 public class _201_samples {
 
@@ -322,6 +323,37 @@ public class _201_samples {
 
     }
 
+    // Try JSON
+    public static void _70_test_json() {
+
+        _99_mealCreate();
+
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        string jsonString = JsonSerializer.Serialize(mealSampleC.foods, options);
+
+        Console.WriteLine($"{jsonString}");
+
+    }
+
+    // Try JSON deserialize
+    public static void _71_test_json_deserialize() {
+
+        string jsonString =
+        @"{
+            ""FoodId"": 10,
+            ""FoodTime"": 40,
+            ""FoodSteps"": 0,
+            ""FoodViewsPrvSet"": 0,
+            ""FoodViews"": 0,
+            ""IngredientNum"": 0,
+            ""FoodViewsPrvOK"": 0,
+            ""FoodName"": ""Banh kem""
+        }";
+
+        NHFoodVerC? food = JsonSerializer.Deserialize<NHFoodVerC>(jsonString);
+
+        Console.WriteLine($"[{food.FoodId}] {food.FoodName}");
+    }
 
 }
 

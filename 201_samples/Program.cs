@@ -17,5 +17,7 @@ Console.WriteLine("Hello, World!");
 // _201_samples._50_test_linq();
 // _201_samples._51_test_linq_class();
 // _201_samples._60_test_async_non_blocking();
-   _201_samples._61_test_async_blocking();
+// _201_samples._61_test_async_blocking();
+// _201_samples._70_test_json();
+   _201_samples._71_test_json_deserialize();
 
