@@ -1,4 +1,6 @@
 
+using System.Diagnostics;
+
 public class _201_samples {
 
     // Test nullable type int?
@@ -266,6 +268,60 @@ public class _201_samples {
         _201_libs.PrintValues(sortTimeQuery);
 
     }
+
+    // Try asynchronous programming or
+    // non-blocking programming!!!
+    public async static void _98_download_url_1() {
+        Console.WriteLine("Download URL 1");
+        await Task.Delay(3000);
+    }
+
+    public async static void _98_download_url_2() {
+        Console.WriteLine("Download URL 2");
+        await Task.Delay(3000);
+    }
+
+    public static void _60_test_async_non_blocking() {
+
+        Console.WriteLine("Start");
+
+        var stopwatch = Stopwatch.StartNew();
+
+        _98_download_url_1();
+        _98_download_url_2();
+
+        stopwatch.Stop();
+
+        Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
+
+    }
+
+    // Try synchronous programming
+    public static void _97_download_url_1() {
+        Console.WriteLine("Download URL 1");
+        Task.Delay(3000).Wait();
+    }
+
+    public static void _97_download_url_2() {
+        Console.WriteLine("Download URL 2");
+        Task.Delay(3000).Wait();
+    }
+
+    public static void _61_test_async_blocking() {
+
+        Console.WriteLine("Start");
+
+        var stopwatch = Stopwatch.StartNew();
+
+        _97_download_url_1();
+        _97_download_url_2();
+
+        stopwatch.Stop();
+
+        Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
+
+    }
+
 
 }
 
