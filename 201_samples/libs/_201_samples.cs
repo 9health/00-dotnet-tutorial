@@ -215,7 +215,7 @@ public class _201_samples {
 
         var sortQuery = 
             from steps in foodSteps
-            orderby steps 
+            orderby steps
             select steps;
 
         // Using query expression syntax
@@ -227,6 +227,44 @@ public class _201_samples {
         // Using method-based query syntax
         Console.WriteLine("Food steps sort using method:");
         _201_libs.PrintValues(sortQuery);
+    }
+
+    private static MealVerC mealSampleC;
+
+    // Create a private sample meal
+    private static void _99_mealCreate() {
+
+        mealSampleC = new MealVerC();
+
+        mealSampleC.AddFood( 1, "Trung ran"       , 10 ) ;
+        mealSampleC.AddFood( 2, "Rau cai xao"     , 15 ) ;
+        mealSampleC.AddFood( 3, "Thit luoc"       , 20 ) ;
+        mealSampleC.AddFood( 4, "Nuoc mam"        , 4  ) ;
+        mealSampleC.AddFood( 5, "Rau muong luoc"  , 20 ) ;
+        mealSampleC.AddFood( 6, "Dau phu luoc"    , 5  ) ;
+        mealSampleC.AddFood( 7, "Nem ran"         , 60 ) ;
+        mealSampleC.AddFood( 8, "Cha cuon la lot" , 30 ) ;
+        mealSampleC.AddFood( 9, "Thanh long"      , 10 ) ;
+        mealSampleC.AddFood(10, "Banh kem"        , 40 ) ;
+
+    }
+
+    // Try LINQ with class
+    public static void _51_test_linq_class() {
+
+        _99_mealCreate();
+
+        var sortTimeQuery = 
+            from food in mealSampleC.foods
+            orderby food.FoodTime descending
+            select food.FoodName + " (" + food.FoodTime + ")";
+
+        //  select new { food.FoodName, food.FoodTime };
+
+
+        Console.WriteLine("Food time sort:");
+        _201_libs.PrintValues(sortTimeQuery);
+
     }
 
 }
