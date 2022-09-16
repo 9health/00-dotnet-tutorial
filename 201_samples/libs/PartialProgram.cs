@@ -32,15 +32,15 @@ partial class Program {
 
         Console.Write("Please enter a test number: ");
 
-        var line = "";
+        var testNumber = "";
 
-        while ( line != "q" ) {
-            line = Console.ReadLine();
-            Console.WriteLine( $"[{DateTime.Now}] Test number: {line}" );
+        while ( testNumber != "q" ) {
+            testNumber = Console.ReadLine();
+            Console.WriteLine( $"[{DateTime.Now}] Test number: {testNumber}" );
 
             Console.WriteLine( "" );
 
-            InteractiveProcessCore(line);
+            InteractiveProcessCore(testNumber);
 
             Console.WriteLine( "" );
 
