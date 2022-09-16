@@ -355,5 +355,15 @@ public class _201_samples {
         Console.WriteLine($"[{food.FoodId}] {food.FoodName}");
     }
 
+    // Try read characters from terminal
+    public static void _80_test_cmd_read() {
+        var line = "";
+        Console.WriteLine("Enter 'q' to exit.");
+        while ( line != "q" ) {
+            line = Console.ReadLine();
+            Console.WriteLine($"[{DateTime.Now}] Input: {line}");
+        }
+    }
+
 }
 
