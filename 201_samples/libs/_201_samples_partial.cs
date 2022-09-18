@@ -1,4 +1,6 @@
 
+using System.Text.Json;
+
 public partial class _201_samples {
 
     // Try read characters from terminal
@@ -40,6 +42,20 @@ public partial class _201_samples {
         int foodLikes;
 #pragma warning restore
         int ingredientNumber;
+    }
+
+    // Try attributes
+    public static void _110_test_attributes() {
+
+        var myMealD = new MealVerD();
+
+        myMealD.AddFood( 1, "Trung ran"  , 10 ) ;
+
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        string jsonString = JsonSerializer.Serialize(myMealD.foods, options);
+
+        Console.WriteLine($"{jsonString}");
+
     }
 
 }
