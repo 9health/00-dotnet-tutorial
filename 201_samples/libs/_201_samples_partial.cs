@@ -31,7 +31,15 @@ public partial class _201_samples {
 #line 200 "Partial Class 201 Samples"
         int? foodID;
 #line default
-        int foodName;
+        string foodName;
+#warning [WARN] foodTime is unused
+        int foodTime;
+// #pragma warning disable 304, CS0168
+#pragma warning disable
+        int foodViews;
+        int foodLikes;
+#pragma warning restore
+        int ingredientNumber;
     }
 
 }
