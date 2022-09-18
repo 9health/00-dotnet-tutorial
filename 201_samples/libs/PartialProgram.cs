@@ -18,6 +18,7 @@ partial class Program {
         { "70"  , "[70]  Test JSON"                    },
         { "71"  , "[71]  Test JSON deserialize"        },
         { "80"  , "[80]  Test cmd read"                },
+        { "90"  , "[90]  Test named arguments"         },
     };
 
     public static void InteractiveProcess() {
@@ -71,6 +72,7 @@ partial class Program {
             case  "70" : _201_samples._70_test_json()               ; break;
             case  "71" : _201_samples._71_test_json_deserialize()   ; break;
             case  "80" : _201_samples._80_test_cmd_read()           ; break;
+            case  "90" : _201_samples._90_test_named_arguments()    ; break;
             case  "q"  :                                            ; break;
             default  : Console.WriteLine("*** Invalid test numer ***"); break;
         }

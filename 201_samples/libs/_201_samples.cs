@@ -365,5 +365,20 @@ public class _201_samples {
         }
     }
 
+    // Try method named arguments
+    public static void _96_printInfo(int foodID, string foodName, int foodTime) {
+        Console.WriteLine($"Food ID:   {foodID}");
+        Console.WriteLine($"Food Name: {foodName}");
+        Console.WriteLine($"Food Time: {foodTime}");
+    }
+
+    public static void _90_test_named_arguments() {
+        _96_printInfo(
+            foodID:   1,
+            foodName: "Rau muong luoc",
+            foodTime: 10
+        );
+    }
+
 }
 
