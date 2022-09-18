@@ -58,5 +58,23 @@ public partial class _201_samples {
 
     }
 
+    // Get attributes
+    public static void _111_test_attributes_get() {
+        var myMealE = new MealVerE();
+
+        myMealE.AddFood( 2, "Rau cai xao", 15 ) ;
+
+        NHFoodVerEAttribute MyAttribute = ( NHFoodVerEAttribute ) Attribute.GetCustomAttribute( typeof(MealVerE), typeof(NHFoodVerEAttribute) );
+        
+        if ( MyAttribute == null ) {
+            Console.WriteLine($"Attribute not found");
+        } else {
+            Console.WriteLine($"Author:   {MyAttribute.Author}  ");
+            Console.WriteLine($"Version:  {MyAttribute.Version} ");
+            Console.WriteLine($"Reviewed: {MyAttribute.Reviewed}");
+        }
+
+    }
+
 }
 
