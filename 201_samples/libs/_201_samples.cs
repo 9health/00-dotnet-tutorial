@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Text.Json;
 
-public class _201_samples {
+public partial class _201_samples {
 
     // Test nullable type int?
     public static void _01_test_nullable() {
@@ -353,31 +353,6 @@ public class _201_samples {
         NHFoodVerC? food = JsonSerializer.Deserialize<NHFoodVerC>(jsonString);
 
         Console.WriteLine($"[{food.FoodId}] {food.FoodName}");
-    }
-
-    // Try read characters from terminal
-    public static void _80_test_cmd_read() {
-        var line = "";
-        Console.WriteLine("Enter 'q' to exit.");
-        while ( line != "q" ) {
-            line = Console.ReadLine();
-            Console.WriteLine($"[{DateTime.Now}] Input: {line}");
-        }
-    }
-
-    // Try method named arguments
-    public static void _96_printInfo(int foodID, string foodName, int foodTime) {
-        Console.WriteLine($"Food ID:   {foodID}");
-        Console.WriteLine($"Food Name: {foodName}");
-        Console.WriteLine($"Food Time: {foodTime}");
-    }
-
-    public static void _90_test_named_arguments() {
-        _96_printInfo(
-            foodID:   1,
-            foodName: "Rau muong luoc",
-            foodTime: 10
-        );
     }
 
 }
