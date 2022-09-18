@@ -2,23 +2,24 @@
 partial class Program {
 
     public static Dictionary<string, string> numberToString = new Dictionary<string, string> {
-        {  "1"  , "[ 1]  Test nullable"                },
-        {  "2"  , "[ 2]  Test nullable exception"      },
-        { "10"  , "[10]  Test array"                   },
-        { "11"  , "[11]  Test var"                     },
-        { "20"  , "[20]  Test class prop"              },
-        { "30"  , "[30]  Test list"                    },
-        { "31"  , "[31]  Test list class"              },
-        { "40"  , "[40]  Test iterators"               },
-        { "41"  , "[41]  Test iterators page"          },
-        { "50"  , "[50]  Test LINQ"                    },
-        { "51"  , "[51]  Test LINQ class"              },
-        { "60"  , "[60]  Test async non blocking"      },
-        { "61"  , "[61]  Test async blocking"          },
-        { "70"  , "[70]  Test JSON"                    },
-        { "71"  , "[71]  Test JSON deserialize"        },
-        { "80"  , "[80]  Test cmd read"                },
-        { "90"  , "[90]  Test named arguments"         },
+        {   "1"  , "  [1]  Test nullable"                },
+        {   "2"  , "  [2]  Test nullable exception"      },
+        {  "10"  , " [10]  Test array"                   },
+        {  "11"  , " [11]  Test var"                     },
+        {  "20"  , " [20]  Test class prop"              },
+        {  "30"  , " [30]  Test list"                    },
+        {  "31"  , " [31]  Test list class"              },
+        {  "40"  , " [40]  Test iterators"               },
+        {  "41"  , " [41]  Test iterators page"          },
+        {  "50"  , " [50]  Test LINQ"                    },
+        {  "51"  , " [51]  Test LINQ class"              },
+        {  "60"  , " [60]  Test async non blocking"      },
+        {  "61"  , " [61]  Test async blocking"          },
+        {  "70"  , " [70]  Test JSON"                    },
+        {  "71"  , " [71]  Test JSON deserialize"        },
+        {  "80"  , " [80]  Test cmd read"                },
+        {  "90"  , " [90]  Test named arguments"         },
+        { "100"  , "[100]  Test preprocesor directives"  },
     };
 
     public static void InteractiveProcess() {
@@ -73,6 +74,7 @@ partial class Program {
             case  "71" : _201_samples._71_test_json_deserialize()   ; break;
             case  "80" : _201_samples._80_test_cmd_read()           ; break;
             case  "90" : _201_samples._90_test_named_arguments()    ; break;
+            case "100" : _201_samples._100_test_prep_directives()   ; break;
             case  "q"  :                                            ; break;
             default  : Console.WriteLine("*** Invalid test numer ***"); break;
         }

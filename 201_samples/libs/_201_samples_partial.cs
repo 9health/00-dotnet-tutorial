@@ -26,5 +26,13 @@ public partial class _201_samples {
         );
     }
 
+    // Try preprocessor directives
+    public static void _100_test_prep_directives() {
+#line 200 "Partial Class 201 Samples"
+        int? foodID;
+#line default
+        int foodName;
+    }
+
 }
 
