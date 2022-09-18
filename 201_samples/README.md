@@ -15,9 +15,9 @@ This code aims to study and test new features in C# which are
 
 # Preparation
 
-Download and install .NET SDK 6 for Windows 64-bit at this link
+Download and install .NET 6.0 Runtime for Windows 64-bit at this link
 
-https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.401-windows-x64-installer
+https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=win10-x64&apphost_version=6.0.8
 
 # How to Run
 
@@ -35,7 +35,3 @@ cd win-x64
 ```
 201_samples.exe
 ```
-
-# Sample Output
-
-# How to build
