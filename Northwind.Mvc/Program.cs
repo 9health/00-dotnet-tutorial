@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Northwind.Mvc.Data;
 using Packt.Shared;
+using System.Net.Http.Headers; // MediaTypeWithQualityHeaderValue
 
 // creates and configures a web host builder
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,20 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 //adds support for MVC controllers with views
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient(name: "Northwind.WebApi", configureClient: options =>
+{
+    options.BaseAddress = new Uri("https://localhost:5002/");
+    options.DefaultRequestHeaders.Accept.Add(
+        new MediaTypeWithQualityHeaderValue("application/json", 1.0));
+});
+
+builder.Services.AddHttpClient(name: "Minimal.WebApi", configureClient: options =>
+{
+    options.BaseAddress = new Uri("https://localhost:5003/");
+    options.DefaultRequestHeaders.Accept.Add(
+        new MediaTypeWithQualityHeaderValue("application/json", 1.0));
+});
 
 builder.Services.AddNorthwindContext(); // load the appropriate connection string and then to register the Northwind database context
 var app = builder.Build();
