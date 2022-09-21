@@ -2,33 +2,34 @@
 partial class Program {
 
     public static Dictionary<string, string> numberToString = new Dictionary<string, string> {
-        {  "1"  , "[ 1]  Test nullable"                },
-        {  "2"  , "[ 2]  Test nullable exception"      },
-        { "10"  , "[10]  Test array"                   },
-        { "11"  , "[11]  Test var"                     },
-        { "20"  , "[20]  Test class prop"              },
-        { "30"  , "[30]  Test list"                    },
-        { "31"  , "[31]  Test list class"              },
-        { "40"  , "[40]  Test iterators"               },
-        { "41"  , "[41]  Test iterators page"          },
-        { "50"  , "[50]  Test LINQ"                    },
-        { "51"  , "[51]  Test LINQ class"              },
-        { "60"  , "[60]  Test async non blocking"      },
-        { "61"  , "[61]  Test async blocking"          },
-        { "70"  , "[70]  Test JSON"                    },
-        { "71"  , "[71]  Test JSON deserialize"        },
-        { "80"  , "[80]  Test cmd read"                },
+        {   "1"  , "  [1]  Test nullable"                },
+        {   "2"  , "  [2]  Test nullable exception"      },
+        {  "10"  , " [10]  Test array"                   },
+        {  "11"  , " [11]  Test var"                     },
+        {  "20"  , " [20]  Test class prop"              },
+        {  "30"  , " [30]  Test list"                    },
+        {  "31"  , " [31]  Test list class"              },
+        {  "40"  , " [40]  Test iterators"               },
+        {  "41"  , " [41]  Test iterators page"          },
+        {  "50"  , " [50]  Test LINQ"                    },
+        {  "51"  , " [51]  Test LINQ class"              },
+        {  "60"  , " [60]  Test async non blocking"      },
+        {  "61"  , " [61]  Test async blocking"          },
+        {  "70"  , " [70]  Test JSON"                    },
+        {  "71"  , " [71]  Test JSON deserialize"        },
+        {  "80"  , " [80]  Test cmd read"                },
+        {  "90"  , " [90]  Test named arguments"         },
+        { "100"  , "[100]  Test preprocesor directives"  },
+        { "110"  , "[110]  Test attributes"              },
+        { "111"  , "[111]  Test attributes get"          },
     };
 
     public static void InteractiveProcess() {
-        Console.WriteLine("Test List");
-        Console.WriteLine("   [Test Number] [Test Description]");
-        Console.WriteLine("   Please enter 'q' to exit.");
+        Console.WriteLine("* Please enter 'q' to exit.");
+        Console.WriteLine("* Please enter 'l' to list testcases.");
         Console.WriteLine("");
 
-        foreach ( var testDescription in numberToString.Values ) {
-            Console.WriteLine( testDescription );
-        }
+        // ListTestcases();
 
         Console.Write("Please enter a test number: ");
 
@@ -42,14 +43,15 @@ partial class Program {
 
             InteractiveProcessCore(testNumber);
 
-            Console.WriteLine( "" );
+            // Console.WriteLine( "" );
 
-            foreach ( var testDescription in numberToString.Values ) {
-                Console.WriteLine( testDescription );
-            }
+            // ListTestcases();
 
             Console.WriteLine( "" );
-            Console.Write("Please enter a test number: ");
+            Console.WriteLine("* Please enter 'q' to exit.");
+            Console.WriteLine("* Please enter 'l' to list testcases.");
+            Console.WriteLine( "" );
+            Console.Write    ("Please enter your option: ");
         }
     }
 
@@ -71,8 +73,21 @@ partial class Program {
             case  "70" : _201_samples._70_test_json()               ; break;
             case  "71" : _201_samples._71_test_json_deserialize()   ; break;
             case  "80" : _201_samples._80_test_cmd_read()           ; break;
+            case  "90" : _201_samples._90_test_named_arguments()    ; break;
+            case "100" : _201_samples._100_test_prep_directives()   ; break;
+            case "110" : _201_samples._110_test_attributes()        ; break;
+            case "111" : _201_samples._111_test_attributes_get()    ; break;
             case  "q"  :                                            ; break;
+            case  "l"  : ListTestcases()                            ; break;
             default  : Console.WriteLine("*** Invalid test numer ***"); break;
+        }
+    }
+
+    public static void ListTestcases() {
+        Console.WriteLine("Test List");
+        Console.WriteLine("   [Test Number] [Test Description]");
+        foreach ( var testDescription in numberToString.Values ) {
+            Console.WriteLine( testDescription );
         }
     }
 
