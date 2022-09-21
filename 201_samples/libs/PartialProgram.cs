@@ -22,6 +22,7 @@ partial class Program {
         { "100"  , "[100]  Test preprocesor directives"  },
         { "110"  , "[110]  Test attributes"              },
         { "111"  , "[111]  Test attributes get"          },
+        { "120"  , "[120]  Test exppression body def."   },
     };
 
     public static void InteractiveProcess() {
@@ -77,6 +78,7 @@ partial class Program {
             case "100" : _201_samples._100_test_prep_directives()   ; break;
             case "110" : _201_samples._110_test_attributes()        ; break;
             case "111" : _201_samples._111_test_attributes_get()    ; break;
+            case "120" : _201_samples._120_test_expr_body_def()     ; break;
             case  "q"  :                                            ; break;
             case  "l"  : ListTestcases()                            ; break;
             default  : Console.WriteLine("*** Invalid test numer ***"); break;
