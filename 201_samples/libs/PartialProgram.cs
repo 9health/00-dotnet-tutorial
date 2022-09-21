@@ -25,9 +25,8 @@ partial class Program {
     };
 
     public static void InteractiveProcess() {
-        Console.WriteLine("Test List");
-        Console.WriteLine("   [Test Number] [Test Description]");
-        Console.WriteLine("   Please enter 'q' to exit.");
+        Console.WriteLine("* Please enter 'q' to exit.");
+        Console.WriteLine("* Please enter 'l' to list testcases.");
         Console.WriteLine("");
 
         // ListTestcases();
@@ -44,12 +43,15 @@ partial class Program {
 
             InteractiveProcessCore(testNumber);
 
-            Console.WriteLine( "" );
+            // Console.WriteLine( "" );
 
             // ListTestcases();
 
             Console.WriteLine( "" );
-            Console.Write("Please enter a test number: ");
+            Console.WriteLine("* Please enter 'q' to exit.");
+            Console.WriteLine("* Please enter 'l' to list testcases.");
+            Console.WriteLine( "" );
+            Console.Write    ("Please enter your option: ");
         }
     }
 
@@ -76,6 +78,7 @@ partial class Program {
             case "110" : _201_samples._110_test_attributes()        ; break;
             case "111" : _201_samples._111_test_attributes_get()    ; break;
             case  "q"  :                                            ; break;
+            case  "l"  : ListTestcases()                            ; break;
             default  : Console.WriteLine("*** Invalid test numer ***"); break;
         }
     }
