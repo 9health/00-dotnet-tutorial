@@ -30,9 +30,7 @@ partial class Program {
         Console.WriteLine("   Please enter 'q' to exit.");
         Console.WriteLine("");
 
-        foreach ( var testDescription in numberToString.Values ) {
-            Console.WriteLine( testDescription );
-        }
+        // ListTestcases();
 
         Console.Write("Please enter a test number: ");
 
@@ -48,9 +46,7 @@ partial class Program {
 
             Console.WriteLine( "" );
 
-            foreach ( var testDescription in numberToString.Values ) {
-                Console.WriteLine( testDescription );
-            }
+            // ListTestcases();
 
             Console.WriteLine( "" );
             Console.Write("Please enter a test number: ");
