@@ -1,6 +1,9 @@
 
 public class NHFoodVerG {
 
+    // Private Members
+    bool disposed = false;
+
     // Auto-implemented properties
     public  int  FoodId          { get; set; }
     public  int  FoodTime        { get; set; }
@@ -39,6 +42,24 @@ public class NHFoodVerG {
         FoodSteps     = steps  ;
         FoodViews     = views  ;
         IngredientNum = inum   ;
+    }
+
+    // Public methods
+    public void Dispose() {
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
+    }
+
+    // Protected methods
+    protected virtual void Dispose(bool disposing) {
+        if ( disposed )
+            return;
+
+        if ( disposing ) {
+            this.Dispose();
+        }
+
+        disposed = true;
     }
 
 }

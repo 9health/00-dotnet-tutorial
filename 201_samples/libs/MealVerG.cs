@@ -7,6 +7,9 @@ public class MealVerG : IDisposable {
     // Members
     public List<NHFoodVerG> foods = new List<NHFoodVerG>();
 
+    // Private Members
+    bool disposed = false;
+
     // Public methods
     public void AddFood(int foodID, string foodName, int foodTime) {
         foods.Add(new NHFoodVerG { FoodId = foodID, FoodName = foodName, FoodTime = foodTime } );
@@ -51,6 +54,11 @@ public class MealVerG : IDisposable {
         }
     }
 
+    public void Dispose() {
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
+    }
+
     // Private methods
     private IEnumerable FoodTimeType(int minTime, int maxTime) {
         foreach ( var food in foods ) {
@@ -58,6 +66,22 @@ public class MealVerG : IDisposable {
                 yield return food.FoodName +  " (" + food.FoodTime + ")";
             }
         }
+    }
+
+    // Protected methods
+    protected virtual void Dispose(bool disposing) {
+        if ( disposed )
+            return;
+
+     // if ( disposing ) {
+     //     foods.Dispose();
+     // }
+
+        foreach ( var food in foods ) {
+            food.Dispose();
+        }
+
+        disposed = true;
     }
 
 }
