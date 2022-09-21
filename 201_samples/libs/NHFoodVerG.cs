@@ -56,7 +56,7 @@ public class NHFoodVerG {
             return;
 
         if ( disposing ) {
-            this.Dispose();
+        //  this.Dispose();
         }
 
         disposed = true;
