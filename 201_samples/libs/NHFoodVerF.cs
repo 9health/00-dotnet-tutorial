@@ -1,8 +1,12 @@
 
+using System.ComponentModel.DataAnnotations;
+
 public class NHFoodVerF {
 
     // Auto-implemented properties
+    [Key]
     public  int  FoodId          { get; set; }
+
     public  int  FoodTime        { get; set; }
     public  int  FoodSteps       { get; set; }
 
