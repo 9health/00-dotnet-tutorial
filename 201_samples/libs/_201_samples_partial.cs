@@ -76,5 +76,23 @@ public partial class _201_samples {
 
     }
 
+    // Try Expression Body Definition
+    public static void IncreaseFoodId(NHFoodVerE food) => food.FoodId += 1;
+
+    public static void _120_test_expr_body_def() {
+        var myMealE = new MealVerE();
+
+        myMealE.AddFood( 4, "Nuoc mam"        , 4  ) ;
+
+        IncreaseFoodId(myMealE.foods[0]);
+
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        string jsonString = JsonSerializer.Serialize(myMealE.foods, options);
+
+        Console.WriteLine($"{jsonString}");
+
+        Console.WriteLine("Expect FoodId = 5");
+    }
+
 }
 
