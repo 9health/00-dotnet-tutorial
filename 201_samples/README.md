@@ -90,6 +90,11 @@ Release _framework-dependent_ binary files
 dotnet publish --self-contained false -r win-x64
 ```
 
+Clean built files
+```
+dotnet clean
+```
+
 Run a specific test from the command line.
 ```
 dotnet run -- [testNumber]
