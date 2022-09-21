@@ -82,3 +82,13 @@ Release _framework-dependent_ binary files
 ```
 dotnet publish --self-contained false -r win-x64
 ```
+
+Run a specific test from the command line.
+```
+dotnet run -- [testNumber]
+```
+
+Example to run test 70
+```
+dotnet run -- 70
+```
