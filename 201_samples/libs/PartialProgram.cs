@@ -84,4 +84,12 @@ partial class Program {
         }
     }
 
+    public static void ListTestcases() {
+        Console.WriteLine("Test List");
+        Console.WriteLine("   [Test Number] [Test Description]");
+        foreach ( var testDescription in numberToString.Values ) {
+            Console.WriteLine( testDescription );
+        }
+    }
+
 }
