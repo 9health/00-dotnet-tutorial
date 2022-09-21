@@ -1,7 +1,6 @@
 
-using Microsoft.EntityFramework.Core;
+using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collection.Generic;
 
 public class FoodModel : DbContext {
 
