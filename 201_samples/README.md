@@ -12,6 +12,9 @@ This code aims to study and test new features in C# which are
 - Asynchronous programming (`async`, `await`)
 - JSON library
 - Read from cmd
+- Named arguments
+- Preprocessor directives
+- Attributes
 
 # Preparation
 
@@ -43,22 +46,26 @@ Test List
    [Test Number] [Test Description]
    Please enter 'q' to exit.
 
-[ 1]  Test nullable
-[ 2]  Test nullable exception
-[10]  Test array
-[11]  Test var
-[20]  Test class prop
-[30]  Test list
-[31]  Test list class
-[40]  Test iterators
-[41]  Test iterators page
-[50]  Test LINQ
-[51]  Test LINQ class
-[60]  Test async non blocking
-[61]  Test async blocking
-[70]  Test JSON
-[71]  Test JSON deserialize
-[80]  Test cmd read
+  [1]  Test nullable
+  [2]  Test nullable exception
+ [10]  Test array
+ [11]  Test var
+ [20]  Test class prop
+ [30]  Test list
+ [31]  Test list class
+ [40]  Test iterators
+ [41]  Test iterators page
+ [50]  Test LINQ
+ [51]  Test LINQ class
+ [60]  Test async non blocking
+ [61]  Test async blocking
+ [70]  Test JSON
+ [71]  Test JSON deserialize
+ [80]  Test cmd read
+ [90]  Test named arguments
+[100]  Test preprocesor directives
+[110]  Test attributes
+[111]  Test attributes get
 Please enter a test number:
 ```
 
