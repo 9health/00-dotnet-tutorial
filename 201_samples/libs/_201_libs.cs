@@ -76,5 +76,12 @@ public class _201_libs {
         Console.WriteLine($"{jsonString}");
     }
 
+    public static void EnterAnyInput()
+    {
+        Console.Write("Enter any character to continue: ");
+        var charInput = Console.ReadLine();
+        Console.WriteLine($"{charInput}");
+    }
+
 }
 

@@ -32,9 +32,15 @@ public partial class _201_samples_class {
         firstFoodQuery.FoodSteps = 4;
         db.SaveChanges();
 
+        // _201_libs.EnterAnyInput();
+
         // Delete
-        Console.WriteLine( "Delete the first food" );
-        db.Remove(firstFoodQuery);
+        var lastFoodQuery  = db.Foods
+                               .OrderBy( f => f.FoodId )
+                               .Last();
+
+        Console.WriteLine( "Delete the last food" );
+        db.Remove(lastFoodQuery);
         db.SaveChanges();
     }
 
