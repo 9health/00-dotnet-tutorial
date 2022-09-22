@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Text.Json;
 
-public partial class _201_samples {
+public partial class _201_samples_class {
 
     // Test nullable type int?
     public static void _01_test_nullable() {

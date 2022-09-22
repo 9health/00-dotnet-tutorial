@@ -1,5 +1,6 @@
 
 using System.Collections;
+using System.Text.Json;
 
 public class _201_libs {
 
@@ -67,6 +68,20 @@ public class _201_libs {
         Console.WriteLine();
     }
 
+    public static void PrintValuesJson(Object obj)
+    {
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        string jsonString = JsonSerializer.Serialize(obj, options);
+
+        Console.WriteLine($"{jsonString}");
+    }
+
+    public static void EnterAnyInput()
+    {
+        Console.Write("Enter any character to continue: ");
+        var charInput = Console.ReadLine();
+        Console.WriteLine($"{charInput}");
+    }
 
 }
 

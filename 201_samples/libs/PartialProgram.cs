@@ -22,6 +22,9 @@ partial class Program {
         { "100"  , "[100]  Test preprocesor directives"  },
         { "110"  , "[110]  Test attributes"              },
         { "111"  , "[111]  Test attributes get"          },
+        { "120"  , "[120]  Test exppression body def."   },
+        { "130"  , "[130]  Test using statement"         },
+        { "500"  , "[500]  Test EF Core"                 },
     };
 
     public static void InteractiveProcess() {
@@ -57,28 +60,31 @@ partial class Program {
 
     public static void  InteractiveProcessCore(string testNumber) {
         switch ( testNumber ) {
-            case   "1" : _201_samples._01_test_nullable()           ; break;
-            case   "2" : _201_samples._02_test_nullable_exception() ; break;
-            case  "10" : _201_samples._10_test_array()              ; break;
-            case  "11" : _201_samples._11_test_var()                ; break;
-            case  "20" : _201_samples._20_test_class_prop()         ; break;
-            case  "30" : _201_samples._30_test_list()               ; break;
-            case  "31" : _201_samples._31_test_list_class()         ; break;
-            case  "40" : _201_samples._40_test_iterators()          ; break;
-            case  "41" : _201_samples._41_test_iterators_page()     ; break;
-            case  "50" : _201_samples._50_test_linq()               ; break;
-            case  "51" : _201_samples._51_test_linq_class()         ; break;
-            case  "60" : _201_samples._60_test_async_non_blocking() ; break;
-            case  "61" : _201_samples._61_test_async_blocking()     ; break;
-            case  "70" : _201_samples._70_test_json()               ; break;
-            case  "71" : _201_samples._71_test_json_deserialize()   ; break;
-            case  "80" : _201_samples._80_test_cmd_read()           ; break;
-            case  "90" : _201_samples._90_test_named_arguments()    ; break;
-            case "100" : _201_samples._100_test_prep_directives()   ; break;
-            case "110" : _201_samples._110_test_attributes()        ; break;
-            case "111" : _201_samples._111_test_attributes_get()    ; break;
-            case  "q"  :                                            ; break;
-            case  "l"  : ListTestcases()                            ; break;
+            case   "1" : _201_samples_class._01_test_nullable()           ; break;
+            case   "2" : _201_samples_class._02_test_nullable_exception() ; break;
+            case  "10" : _201_samples_class._10_test_array()              ; break;
+            case  "11" : _201_samples_class._11_test_var()                ; break;
+            case  "20" : _201_samples_class._20_test_class_prop()         ; break;
+            case  "30" : _201_samples_class._30_test_list()               ; break;
+            case  "31" : _201_samples_class._31_test_list_class()         ; break;
+            case  "40" : _201_samples_class._40_test_iterators()          ; break;
+            case  "41" : _201_samples_class._41_test_iterators_page()     ; break;
+            case  "50" : _201_samples_class._50_test_linq()               ; break;
+            case  "51" : _201_samples_class._51_test_linq_class()         ; break;
+            case  "60" : _201_samples_class._60_test_async_non_blocking() ; break;
+            case  "61" : _201_samples_class._61_test_async_blocking()     ; break;
+            case  "70" : _201_samples_class._70_test_json()               ; break;
+            case  "71" : _201_samples_class._71_test_json_deserialize()   ; break;
+            case  "80" : _201_samples_class._80_test_cmd_read()           ; break;
+            case  "90" : _201_samples_class._90_test_named_arguments()    ; break;
+            case "100" : _201_samples_class._100_test_prep_directives()   ; break;
+            case "110" : _201_samples_class._110_test_attributes()        ; break;
+            case "111" : _201_samples_class._111_test_attributes_get()    ; break;
+            case "120" : _201_samples_class._120_test_expr_body_def()     ; break;
+            case "130" : _201_samples_class._130_test_using_statement()   ; break;
+            case "500" : _201_samples_class._500_test_ef()                ; break;
+            case  "q"  :                                                  ; break;
+            case  "l"  : ListTestcases()                                  ; break;
             default  : Console.WriteLine("*** Invalid test numer ***"); break;
         }
     }
