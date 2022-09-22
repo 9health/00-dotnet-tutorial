@@ -6,3 +6,6 @@
 :tabnew libs/_201_samples_partial.cs
 :tabnew libs/NHFoodVerE.cs
 :tabnew libs/MealVerE.cs
+:args libs/*.cs
+:args models/*.cs
+:args *.cs
