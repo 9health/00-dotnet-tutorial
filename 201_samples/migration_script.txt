@@ -1,0 +1,29 @@
+
+// Thu Sep 22 10:43:26 SEAST 2022
+
+>dotnet ef migrations script
+
+Build started...
+Build succeeded.
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+        "ProductVersion" TEXT NOT NULL
+        );
+
+BEGIN TRANSACTION;
+
+CREATE TABLE "Foods" (
+    "FoodId" INTEGER NOT NULL CONSTRAINT "PK_Foods" PRIMARY KEY AUTOINCREMENT,
+    "FoodTime" INTEGER NOT NULL,
+    "FoodSteps" INTEGER NOT NULL,
+    "FoodViews" INTEGER NOT NULL,
+    "IngredientNum" INTEGER NOT NULL,
+    "FoodName" TEXT NOT NULL
+);
+
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220921111511__01_FirstFoodModel', '6.0.9');
+
+COMMIT;
+
+
