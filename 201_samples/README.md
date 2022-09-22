@@ -17,6 +17,7 @@ This code aims to study and test new features in C# which are
 - Attributes
 - Test expression body definition
 - Test `using` statement
+- Test EF Core
 
 # Preparation
 
@@ -70,8 +71,13 @@ Test List
 [111]  Test attributes get
 [120]  Test exppression body def.
 [130]  Test using statement
+[130]  Test using statement
+[500]  Test EF Core
 
-Please enter a test number:
+* Please enter 'q' to exit.
+* Please enter 'l' to list testcases.
+
+Please enter your option:
 ```
 
 # How to Run
