@@ -1,7 +1,7 @@
 
 using System.Text.Json;
 
-public partial class _201_samples {
+public partial class _201_samples_class {
 
     // Try read characters from terminal
     public static void _80_test_cmd_read() {
