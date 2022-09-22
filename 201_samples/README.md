@@ -103,7 +103,7 @@ dotnet run
 
 Release _framework-dependent_ binary files
 ```
-dotnet publish --self-contained false -r win-x64
+dotnet publish --self-contained false -c Release -r win-x64
 ```
 
 Clean built files
