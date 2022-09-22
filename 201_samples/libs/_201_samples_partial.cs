@@ -94,5 +94,28 @@ public partial class _201_samples {
         Console.WriteLine("Expect FoodId = 5");
     }
 
+    // Try using statement
+    public static void _130_test_using_statement() {
+
+        using ( var myMealG = new MealVerG() ) {
+            myMealG.AddFood( 8, "Cha cuon la lot" , 30 ) ;
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string jsonString = JsonSerializer.Serialize(myMealG.foods, options);
+
+            Console.WriteLine($"{jsonString}");
+        }
+
+        // Build error!!!
+        //   error CS0103: The name 'myMealG' does not exist in the current context
+        //
+        // IncreaseFoodId(myMealG.foods[0]);
+
+        // var optionsVerG = new JsonSerializerOptions { WriteIndented = true };
+        // string jsonStringVerG = JsonSerializer.Serialize(myMealG.foods, optionsVerG);
+
+        // Console.WriteLine($"{jsonStringVerG}");
+
+    }
+
 }
 

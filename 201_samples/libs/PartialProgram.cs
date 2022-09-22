@@ -23,6 +23,7 @@ partial class Program {
         { "110"  , "[110]  Test attributes"              },
         { "111"  , "[111]  Test attributes get"          },
         { "120"  , "[120]  Test exppression body def."   },
+        { "130"  , "[130]  Test using statement"         },
     };
 
     public static void InteractiveProcess() {
@@ -79,6 +80,7 @@ partial class Program {
             case "110" : _201_samples._110_test_attributes()        ; break;
             case "111" : _201_samples._111_test_attributes_get()    ; break;
             case "120" : _201_samples._120_test_expr_body_def()     ; break;
+            case "130" : _201_samples._130_test_using_statement()   ; break;
             case  "q"  :                                            ; break;
             case  "l"  : ListTestcases()                            ; break;
             default  : Console.WriteLine("*** Invalid test numer ***"); break;
