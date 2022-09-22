@@ -24,7 +24,7 @@ partial class Program {
         { "111"  , "[111]  Test attributes get"          },
         { "120"  , "[120]  Test exppression body def."   },
         { "130"  , "[130]  Test using statement"         },
-        { "500"  , "[500]  Test ef"                      },
+        { "500"  , "[500]  Test EF Core"                 },
     };
 
     public static void InteractiveProcess() {
