@@ -80,6 +80,11 @@ Change directory to 201_samples
 cd 201_samples
 ```
 
+Build the project (should be used before running in a large project)
+```
+dotnet compile
+```
+
 Run the project
 ```
 dotnet run
