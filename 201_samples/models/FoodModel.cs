@@ -9,8 +9,9 @@ public class FoodModel : DbContext {
     public  string  DbPath { get; }
 
     public  FoodModel() {
-        var  folder  =  Environment.SpecialFolder.LocalApplicationData;
-        var  path    =  Environment.GetFolderPath(folder);
+      //var  folder  =  Environment.SpecialFolder.LocalApplicationData;
+      //var  path    =  Environment.GetFolderPath(folder);
+        var  path    =  System.IO.Directory.GetCurrentDirectory();
         DbPath       =  System.IO.Path.Join(path, "food.db");
     }
 
