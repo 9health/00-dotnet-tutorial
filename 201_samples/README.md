@@ -15,6 +15,8 @@ This code aims to study and test new features in C# which are
 - Named arguments
 - Preprocessor directives
 - Attributes
+- Test expression body definition
+- Test `using` statement
 
 # Preparation
 
@@ -66,6 +68,9 @@ Test List
 [100]  Test preprocesor directives
 [110]  Test attributes
 [111]  Test attributes get
+[120]  Test exppression body def.
+[130]  Test using statement
+
 Please enter a test number:
 ```
 
@@ -78,6 +83,11 @@ git clone https://github.com/9health/00-dotnet-tutorial.git
 Change directory to 201_samples
 ```
 cd 201_samples
+```
+
+Build the project (should be used before running in a large project)
+```
+dotnet compile
 ```
 
 Run the project
