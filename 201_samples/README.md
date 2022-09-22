@@ -120,3 +120,41 @@ Example to run test 70
 ```
 dotnet run -- 70
 ```
+
+# For EF Core
+Create migration files
+```
+dotnet ef migrations add [migrationName]
+```
+
+Generate SQL migration script (to review)
+```
+dotnet ef migration script
+```
+
+Create database (or apply changes to the database)
+```
+dotnet ef database update
+dotnet ef database update -v // For more details
+```
+
+# For SQLite3
+List databases
+```
+.databases
+```
+
+List tables
+```
+.tables
+```
+
+List all foods
+```
+SELECT * FROM foods;
+```
+
+One-line command
+```
+sqlite3 -init list_food.sql food.db .quit
+```
