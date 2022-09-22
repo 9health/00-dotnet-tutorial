@@ -35,6 +35,7 @@ unzip 201_samples_v*.zip
 - Go to inside the folder
 ```
 cd win-x64
+cd win-x64\publish   // From version v0.2
 ```
 
 - Run the programm
