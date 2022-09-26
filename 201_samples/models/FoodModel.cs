@@ -12,7 +12,7 @@ public class FoodModel : DbContext {
       //var  folder  =  Environment.SpecialFolder.LocalApplicationData;
       //var  path    =  Environment.GetFolderPath(folder);
         var  path    =  System.IO.Directory.GetCurrentDirectory();
-        DbPath       =  System.IO.Path.Join(path, "food.db");
+        DbPath       =  System.IO.Path.Join(path, "db", System.IO.Path.DirectorySeparatorChar.ToString() ,"food.sqlite");
     }
 
     // The following configure EF to create a SQLite database file on
