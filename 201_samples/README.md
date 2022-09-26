@@ -112,6 +112,11 @@ Clean built files
 dotnet clean
 ```
 
+Build project (should be used when modifying files in a large project!)
+```
+dotnet build
+```
+
 Run a specific test from the command line.
 ```
 dotnet run -- [testNumber]
