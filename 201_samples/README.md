@@ -166,6 +166,11 @@ List tables
 .tables
 ```
 
+Show column names
+```
+PRAGMA table_info(table_name);
+```
+
 List all foods
 ```
 SELECT * FROM foods;
