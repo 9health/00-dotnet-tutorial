@@ -128,6 +128,17 @@ dotnet run -- 70
 ```
 
 # For EF Core
+References
+
+https://learn.microsoft.com/ef/core/get-started/overview/first-app
+
+Install EF Core packages (optional)
+```
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Design
+```
+
 Create migration files
 ```
 dotnet ef migrations add [migrationName]
