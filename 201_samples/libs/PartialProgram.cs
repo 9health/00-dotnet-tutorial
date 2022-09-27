@@ -25,6 +25,7 @@ partial class Program {
         { "120"  , "[120]  Test exppression body def."   },
         { "130"  , "[130]  Test using statement"         },
         { "140"  , "[140]  Test switch expression"       },
+        { "150"  , "[150]  Test is operator"             },
         { "500"  , "[500]  Test EF Core"                 },
     };
 
@@ -84,6 +85,7 @@ partial class Program {
             case "120" : _201_samples_class._120_test_expr_body_def()     ; break;
             case "130" : _201_samples_class._130_test_using_statement()   ; break;
             case "140" : _201_samples_class._140_test_switch_expression() ; break;
+            case "150" : _201_samples_class._150_test_is_operator()       ; break;
             case "500" : _201_samples_class._500_test_ef()                ; break;
             case  "q"  :                                                  ; break;
             case  "l"  : ListTestcases()                                  ; break;

@@ -1,3 +1,12 @@
+//========================================================================
+//
+//  Author: 9Health
+//
+//  Changelog:
+//
+//    2022/Sep/27  v0.1  Add 140, 150 testcases
+//
+//========================================================================
 
 using System.Text.Json;
 
@@ -132,6 +141,22 @@ public partial class _201_samples_class {
             Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {FoodTimeCheck(food)}");
         }
 
+    }
+
+    // Try is operator
+    private static bool IsFoodTimeLong(NHFoodVerC foodVerC) => foodVerC is {
+         FoodTime: >= 15
+    };
+
+    public static void _150_test_is_operator() {
+
+        _99_mealCreate();
+
+        Console.WriteLine("[FoodID] FoodName : IsFoodTimeLong()");
+
+        foreach (var food in mealSampleC.foods) {
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {IsFoodTimeLong(food)}");
+        }
     }
 
 
