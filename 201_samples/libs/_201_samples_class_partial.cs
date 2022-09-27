@@ -4,7 +4,7 @@
 //
 //  Changelog:
 //
-//    2022/Sep/27  v0.1  Add 140, 150 testcases
+//    2022/Sep/27  v0.1  Add 140, 150, 160 testcases
 //
 //========================================================================
 
@@ -170,6 +170,24 @@ public partial class _201_samples_class {
             Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {food.FoodTime,2} ({IsFoodTimeNotLong(food)})");
         }
 
+
+    }
+
+    // Try when keyword guard
+    private static string FoodTimeCheckTop5(NHFoodVerC foodVerC) => foodVerC switch {
+        { FoodTime: > 15  } when ( foodVerC.FoodId <= 5 )   =>  "Lau"         ,
+        { FoodTime: > 5   } when ( foodVerC.FoodId <= 5 )   =>  "Binh thuong" ,
+        { FoodTime: _     } when ( foodVerC.FoodId <= 5 )   =>  "Nhanh"       ,
+        _                                                   =>  "NA"          ,
+    };
+
+    public static void _160_test_when_guard() {
+
+        _99_mealCreate();
+
+        foreach (var food in mealSampleC.foods) {
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {food.FoodTime,2} ({FoodTimeCheckTop5(food)})");
+        }
 
     }
 
