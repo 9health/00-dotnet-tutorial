@@ -148,6 +148,10 @@ public partial class _201_samples_class {
          FoodTime: >= 15
     };
 
+    private static bool IsFoodTimeNotLong(NHFoodVerC foodVerC) => foodVerC is not {
+         FoodTime: >= 15
+    };
+
     public static void _150_test_is_operator() {
 
         _99_mealCreate();
@@ -155,8 +159,18 @@ public partial class _201_samples_class {
         Console.WriteLine("[FoodID] FoodName : IsFoodTimeLong()");
 
         foreach (var food in mealSampleC.foods) {
-            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {IsFoodTimeLong(food)}");
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {food.FoodTime,2} ({IsFoodTimeLong(food)})");
         }
+
+        Console.WriteLine("");
+
+        Console.WriteLine("[FoodID] FoodName : IsFoodTimeNotLong()");
+
+        foreach (var food in mealSampleC.foods) {
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {food.FoodTime,2} ({IsFoodTimeNotLong(food)})");
+        }
+
+
     }
 
 
