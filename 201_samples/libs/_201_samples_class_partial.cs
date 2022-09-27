@@ -117,5 +117,23 @@ public partial class _201_samples_class {
 
     }
 
+    // Try switch expression
+    private static string FoodTimeCheck(NHFoodVerC foodVerC) => foodVerC.FoodTime switch {
+        >   0 and <  5   =>  "Nhanh"       ,
+        >=  5 and < 15   =>  "Binh thuong" ,
+        _                =>  "Lau"         ,
+    };
+
+    public static void _140_test_switch_expression() {
+
+        _99_mealCreate();
+
+        foreach (var food in mealSampleC.foods) {
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {FoodTimeCheck(food)}");
+        }
+
+    }
+
+
 }
 
