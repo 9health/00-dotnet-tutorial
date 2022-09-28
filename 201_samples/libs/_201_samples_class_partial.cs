@@ -1,3 +1,12 @@
+//========================================================================
+//
+//  Author: 9Health
+//
+//  Changelog:
+//
+//    2022/Sep/27  v0.1  Add 140, 150, 160 testcases
+//
+//========================================================================
 
 using System.Text.Json;
 
@@ -116,6 +125,72 @@ public partial class _201_samples_class {
         // Console.WriteLine($"{jsonStringVerG}");
 
     }
+
+    // Try switch expression
+    private static string FoodTimeCheck(NHFoodVerC foodVerC) => foodVerC.FoodTime switch {
+        >   0 and <  5   =>  "Nhanh"       ,
+        >=  5 and < 15   =>  "Binh thuong" ,
+        _                =>  "Lau"         ,
+    };
+
+    public static void _140_test_switch_expression() {
+
+        _99_mealCreate();
+
+        foreach (var food in mealSampleC.foods) {
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {FoodTimeCheck(food)}");
+        }
+
+    }
+
+    // Try is operator
+    private static bool IsFoodTimeLong(NHFoodVerC foodVerC) => foodVerC is {
+         FoodTime: >= 15
+    };
+
+    private static bool IsFoodTimeNotLong(NHFoodVerC foodVerC) => foodVerC is not {
+         FoodTime: >= 15
+    };
+
+    public static void _150_test_is_operator() {
+
+        _99_mealCreate();
+
+        Console.WriteLine("[FoodID] FoodName : IsFoodTimeLong()");
+
+        foreach (var food in mealSampleC.foods) {
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {food.FoodTime,2} ({IsFoodTimeLong(food)})");
+        }
+
+        Console.WriteLine("");
+
+        Console.WriteLine("[FoodID] FoodName : IsFoodTimeNotLong()");
+
+        foreach (var food in mealSampleC.foods) {
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {food.FoodTime,2} ({IsFoodTimeNotLong(food)})");
+        }
+
+
+    }
+
+    // Try when keyword guard
+    private static string FoodTimeCheckTop5(NHFoodVerC foodVerC) => foodVerC switch {
+        { FoodTime: > 15  } when ( foodVerC.FoodId <= 5 )   =>  "Lau"         ,
+        { FoodTime: > 5   } when ( foodVerC.FoodId <= 5 )   =>  "Binh thuong" ,
+        { FoodTime: _     } when ( foodVerC.FoodId <= 5 )   =>  "Nhanh"       ,
+        _                                                   =>  "NA"          ,
+    };
+
+    public static void _160_test_when_guard() {
+
+        _99_mealCreate();
+
+        foreach (var food in mealSampleC.foods) {
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {food.FoodTime,2} ({FoodTimeCheckTop5(food)})");
+        }
+
+    }
+
 
 }
 
