@@ -97,9 +97,9 @@ Change directory to 201_samples
 cd 201_samples
 ```
 
-Build the project (should be used before running in a large project)
+Compile the project (should be used before running in a large project)
 ```
-dotnet compile
+dotnet build
 ```
 
 Run the project
