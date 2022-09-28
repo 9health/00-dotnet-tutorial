@@ -32,4 +32,5 @@ This describes the food database of this small project.
 
 ## References
 
-*  [[O'Reilly.com] List column information for a table](https://www.oreilly.com/library/view/using-sqlite/9781449394592/re205.html)
+* [[O'Reilly.com] List column information for a table](https://www.oreilly.com/library/view/using-sqlite/9781449394592/re205.html)
+* [[Stack Overflow] How to store a list in a db column](https://stackoverflow.com/questions/444251/how-to-store-a-list-in-a-db-column)
