@@ -112,6 +112,11 @@ Clean built files
 dotnet clean
 ```
 
+Build project (should be used when modifying files in a large project!)
+```
+dotnet build
+```
+
 Run a specific test from the command line.
 ```
 dotnet run -- [testNumber]
@@ -123,6 +128,17 @@ dotnet run -- 70
 ```
 
 # For EF Core
+References
+
+https://learn.microsoft.com/ef/core/get-started/overview/first-app
+
+Install EF Core packages (optional)
+```
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Design
+```
+
 Create migration files
 ```
 dotnet ef migrations add [migrationName]
@@ -148,6 +164,11 @@ List databases
 List tables
 ```
 .tables
+```
+
+Show column names
+```
+PRAGMA table_info(table_name);
 ```
 
 List all foods
