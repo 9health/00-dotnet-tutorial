@@ -17,6 +17,9 @@ This code aims to study and test new features in C# which are
 - Attributes
 - Test expression body definition
 - Test `using` statement
+- Test `switch` expression
+- Test `is` operator, `not` pattern, `and` pattern
+- Test `when` case guard
 - Test EF Core
 
 # Preparation
@@ -72,7 +75,9 @@ Test List
 [111]  Test attributes get
 [120]  Test exppression body def.
 [130]  Test using statement
-[130]  Test using statement
+[140]  Test switch expression
+[150]  Test is operator
+[160]  Test when case guard
 [500]  Test EF Core
 
 * Please enter 'q' to exit.
@@ -92,9 +97,9 @@ Change directory to 201_samples
 cd 201_samples
 ```
 
-Build the project (should be used before running in a large project)
+Compile the project (should be used before running in a large project)
 ```
-dotnet compile
+dotnet build
 ```
 
 Run the project

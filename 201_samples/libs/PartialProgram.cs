@@ -1,4 +1,14 @@
 
+//========================================================================
+//
+//  Author: 9Health
+//
+//  Changelog:
+//
+//    2022/Sep/27  v0.1  Add 140, 150, 160 testcases
+//
+//========================================================================
+
 partial class Program {
 
     public static Dictionary<string, string> numberToString = new Dictionary<string, string> {
@@ -24,6 +34,9 @@ partial class Program {
         { "111"  , "[111]  Test attributes get"          },
         { "120"  , "[120]  Test exppression body def."   },
         { "130"  , "[130]  Test using statement"         },
+        { "140"  , "[140]  Test switch expression"       },
+        { "150"  , "[150]  Test is operator"             },
+        { "160"  , "[160]  Test when case guard"         },
         { "500"  , "[500]  Test EF Core"                 },
     };
 
@@ -82,6 +95,9 @@ partial class Program {
             case "111" : _201_samples_class._111_test_attributes_get()    ; break;
             case "120" : _201_samples_class._120_test_expr_body_def()     ; break;
             case "130" : _201_samples_class._130_test_using_statement()   ; break;
+            case "140" : _201_samples_class._140_test_switch_expression() ; break;
+            case "150" : _201_samples_class._150_test_is_operator()       ; break;
+            case "160" : _201_samples_class._160_test_when_guard()        ; break;
             case "500" : _201_samples_class._500_test_ef()                ; break;
             case  "q"  :                                                  ; break;
             case  "l"  : ListTestcases()                                  ; break;
