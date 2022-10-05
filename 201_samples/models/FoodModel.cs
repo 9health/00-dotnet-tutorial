@@ -4,6 +4,7 @@ using System;
 
 public class FoodModel : DbContext {
 
+    public  DbSet<MealVerF>    Meals { get; set; }
     public  DbSet<NHFoodVerF>  Foods { get; set; }
 
     public  string  DbPath { get; }
