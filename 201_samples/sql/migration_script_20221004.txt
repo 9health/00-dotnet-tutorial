@@ -1,0 +1,73 @@
+Build started...
+Build succeeded.
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+
+BEGIN TRANSACTION;
+
+CREATE TABLE "Foods" (
+    "FoodId" INTEGER NOT NULL CONSTRAINT "PK_Foods" PRIMARY KEY AUTOINCREMENT,
+    "FoodTime" INTEGER NOT NULL,
+    "FoodSteps" INTEGER NOT NULL,
+    "FoodViews" INTEGER NOT NULL,
+    "IngredientNum" INTEGER NOT NULL,
+    "FoodName" TEXT NOT NULL
+);
+
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220921111511__01_FirstFoodModel', '6.0.9');
+
+COMMIT;
+
+BEGIN TRANSACTION;
+
+ALTER TABLE "Foods" ADD "MealVerFMealId" INTEGER NULL;
+
+CREATE TABLE "Meals" (
+    "MealId" INTEGER NOT NULL CONSTRAINT "PK_Meals" PRIMARY KEY AUTOINCREMENT,
+    "MealName" TEXT NOT NULL
+);
+
+CREATE INDEX "IX_Foods_MealVerFMealId" ON "Foods" ("MealVerFMealId");
+
+CREATE TABLE "ef_temp_Foods" (
+    "FoodId" INTEGER NOT NULL CONSTRAINT "PK_Foods" PRIMARY KEY AUTOINCREMENT,
+    "FoodName" TEXT NOT NULL,
+    "FoodSteps" INTEGER NOT NULL,
+    "FoodTime" INTEGER NOT NULL,
+    "FoodViews" INTEGER NOT NULL,
+    "IngredientNum" INTEGER NOT NULL,
+    "MealVerFMealId" INTEGER NULL,
+    CONSTRAINT "FK_Foods_Meals_MealVerFMealId" FOREIGN KEY ("MealVerFMealId") REFERENCES "Meals" ("MealId")
+);
+
+INSERT INTO "ef_temp_Foods" ("FoodId", "FoodName", "FoodSteps", "FoodTime", "FoodViews", "IngredientNum", "MealVerFMealId")
+SELECT "FoodId", "FoodName", "FoodSteps", "FoodTime", "FoodViews", "IngredientNum", "MealVerFMealId"
+FROM "Foods";
+
+COMMIT;
+
+PRAGMA foreign_keys = 0;
+
+BEGIN TRANSACTION;
+
+DROP TABLE "Foods";
+
+ALTER TABLE "ef_temp_Foods" RENAME TO "Foods";
+
+COMMIT;
+
+PRAGMA foreign_keys = 1;
+
+BEGIN TRANSACTION;
+
+CREATE INDEX "IX_Foods_MealVerFMealId" ON "Foods" ("MealVerFMealId");
+
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20221004153031__02_SecondMealAdd', '6.0.9');
+
+COMMIT;
+
+
