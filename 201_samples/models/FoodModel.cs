@@ -1,4 +1,16 @@
 
+//========================================================================
+//
+//  Author: 9Health
+//
+//  Changelog:
+//
+//    2022/Sep/21  v0.1    Newly create
+//    2022/Sep/26  v0.1.1  Rename to from .db to .sqlite
+//    2022/Oct/05  v0.2    Add Meals database
+//
+//========================================================================
+
 using Microsoft.EntityFrameworkCore;
 using System;
 
