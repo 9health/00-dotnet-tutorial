@@ -5,7 +5,9 @@
 //
 //  Changelog:
 //
-//    2022/Sep/27  v0.1  Add 140, 150, 160 testcases
+//    2022/Sep/22  v0.0.1  Add EF testcase
+//    2022/Sep/27  v0.1    Add 140, 150, 160 testcases
+//    2022/Oct/06  v0.2    Add EF refactor testcase
 //
 //========================================================================
 
@@ -38,6 +40,7 @@ partial class Program {
         { "150"  , "[150]  Test is operator"             },
         { "160"  , "[160]  Test when case guard"         },
         { "500"  , "[500]  Test EF Core"                 },
+        { "500"  , "[510]  Test EF Core (Refactor)"      },
     };
 
     public static void InteractiveProcess() {
@@ -99,6 +102,7 @@ partial class Program {
             case "150" : _201_samples_class._150_test_is_operator()       ; break;
             case "160" : _201_samples_class._160_test_when_guard()        ; break;
             case "500" : _201_samples_class._500_test_ef()                ; break;
+            case "510" : _201_samples_class._510_test_ef_refactor()       ; break;
             case  "q"  :                                                  ; break;
             case  "l"  : ListTestcases()                                  ; break;
             default  : Console.WriteLine("*** Invalid test numer ***"); break;
