@@ -1,4 +1,7 @@
-"vim -S source.vim
+"
+" HELP
+"   For Windows: vim -S vim\source_ef.vim
+"
 :args libs/*.cs
 :args models/*.cs
 :args *.cs
