@@ -54,5 +54,9 @@ public partial class _201_samples_class {
         db.SaveChanges();
     }
 
+    // Try to refactor test case number 500
+    public static void _510_test_ef_refactor() {
+    }
+
 }
 
