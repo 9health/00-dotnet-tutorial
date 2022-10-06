@@ -4,6 +4,7 @@
 --    sqlite3 -init sql\delete_food.sql db\food.sqlite .quit
 -- 
 -- List all food
-DELETE FROM foods;
-DELETE FROM sqlite_sequence WHERE NAME='foods';
+DELETE FROM Foods;
+DELETE FROM sqlite_sequence WHERE NAME='Foods';
+SELECT * FROM sqlite_sequence;
 
