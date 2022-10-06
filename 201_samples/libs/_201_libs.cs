@@ -1,4 +1,14 @@
 
+//========================================================================
+//
+//  Author: 9Health
+//
+//  Changelog:
+//
+//    2022/Oct/06  v0.1.0  Add database output in JSON format
+//
+//========================================================================
+
 using System.Collections;
 using System.Text.Json;
 
@@ -76,11 +86,34 @@ public class _201_libs {
         Console.WriteLine($"{jsonString}");
     }
 
+    public static void PrintValuesJson(IEnumerable objList)
+    {
+        foreach (var obj in objList) {
+            PrintValuesJson(obj);
+        }
+    }
+
+
     public static void EnterAnyInput()
     {
         Console.Write("Enter any character to continue: ");
         var charInput = Console.ReadLine();
         Console.WriteLine($"{charInput}");
+    }
+
+    public static void PrintDatabaseJSON()
+    {
+
+        using var db = new FoodModel();
+
+        var allFoodQuery = db.Foods.OrderBy( f => f.FoodId ) ;
+
+        PrintValuesJson( allFoodQuery );
+
+        var allMealQuery = db.Meals.OrderBy( f => f.MealId ) ;
+
+        PrintValuesJson( allMealQuery );
+
     }
 
 }
