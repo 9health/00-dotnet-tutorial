@@ -1,5 +1,9 @@
 
+//
 // Go to try.dot.net and paste following code to try!!!
+//
+// Description: try to create object using new
+//
 
 using System;
 using System.Collections.Generic;
