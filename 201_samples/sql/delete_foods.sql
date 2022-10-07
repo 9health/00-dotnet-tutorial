@@ -1,7 +1,7 @@
 --
 -- HELP
 --    From cmd
---    sqlite3 -init sql\delete_food.sql db\food.sqlite .quit
+--    sqlite3 -init sql\delete_foods.sql db\food.sqlite .quit
 -- 
 -- List all food
 DELETE FROM Foods;
