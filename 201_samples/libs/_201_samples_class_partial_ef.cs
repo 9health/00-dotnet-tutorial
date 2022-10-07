@@ -7,6 +7,7 @@
 //
 //    2022/Sep/22  v0.1   Newly create
 //    2022/Oct/06  v0.2   Add EF refactor testcase
+//    2022/Oct/08  v0.3   Add EF migration testcase
 //
 //========================================================================
 
@@ -95,6 +96,56 @@ public partial class _201_samples_class {
         db.SaveChanges();
 
         _201_libs.PrintDatabaseJSON();
+    }
+
+    // Try Meal db manipulate
+    public static void _520_test_ef_migration() {
+
+        using var db = new FoodModel();
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "1. Add new meal" );
+
+        db.Add( new MealVerF {
+           MealName = "An trua",
+           FoodList =  {
+               new NHFoodVerF { FoodName = "Trung ran"   , FoodTime = 10 },
+               new NHFoodVerF { FoodName = "Rau cai xao" , FoodTime = 15 },
+               new NHFoodVerF { FoodName = "Thit luoc"   , FoodTime = 20 },
+           },
+        } );
+
+        db.SaveChanges();
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "2. Read from the database" );
+        _201_libs.PrintDatabaseJSON();
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "3. Update database" );
+        Console.WriteLine( "     Change FoodSteps to 4" );
+
+        var firstMealQuery = db.Meals
+                               .OrderBy( m => m.MealId )
+                               .First();
+
+        firstMealQuery.FoodList[0].FoodSteps = 4;
+
+        db.SaveChanges();
+
+        _201_libs.PrintDatabaseJSON();
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "4. Delete last food from database" );
+
+        var lastMealQuery  = db.Meals
+                               .OrderBy( m => m.MealId )
+                               .Last();
+        db.Remove(lastMealQuery.FoodList.Last());
+        db.SaveChanges();
+
+        _201_libs.PrintDatabaseJSON();
+
     }
 
 }
