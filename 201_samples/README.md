@@ -21,6 +21,8 @@ This code aims to study and test new features in C# which are
 - Test `is` operator, `not` pattern, `and` pattern
 - Test `when` case guard
 - Test EF Core
+- Test EF Core (Refactor)
+- Test EF Core Migration
 
 # Preparation
 
@@ -79,6 +81,8 @@ Test List
 [150]  Test is operator
 [160]  Test when case guard
 [500]  Test EF Core
+[510]  Test EF Core (Refactor)
+[520]  Test EF Core Migration
 
 * Please enter 'q' to exit.
 * Please enter 'l' to list testcases.
