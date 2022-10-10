@@ -150,6 +150,17 @@ Same as [Foods table](#foods-table) in [Version 1](#version-1)
 |MealId       | ID of meal                               |
 |MealName     | Name of the meal                         |
 
+  #### Example
+
+|MealId|MealName|
+|:----:|--------|
+|1|An sang|
+|1|An sang|
+|1|An sang|
+|2|An toi|
+|2|An toi|
+|2|An toi|
+
 </p>
 </details>
 
