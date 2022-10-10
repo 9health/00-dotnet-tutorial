@@ -1,0 +1,96 @@
+
+//
+// Go to try.dot.net and paste following code to try!!!
+//
+// Description: try to create object using new
+//
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Program
+{
+  public static void Main()
+  {
+
+    Console.WriteLine("Hello world!");
+
+    Food food1 = new Food();
+    food1.FoodId = 1;
+
+    Console.WriteLine(food1.FoodId);
+
+    Food food2 = new Food();
+    food2.FoodId = 2;
+
+    Console.WriteLine(food2.FoodId);
+
+    Food food3 = new Food();
+    food3.FoodId = 3;
+
+    Console.WriteLine(food3.FoodId);
+
+    Meal MealA = new Meal();
+
+    MealA.FoodList.Add(food1);
+    MealA.FoodList.Add(food2);
+    MealA.FoodList.Add(food3);
+
+    Console.WriteLine(MealA.FoodList[0].FoodId);
+    Console.WriteLine(MealA.FoodList[1].FoodId);
+    Console.WriteLine(MealA.FoodList[2].FoodId);
+
+    food3.FoodId=4;
+
+    Console.WriteLine(MealA.FoodList[0].FoodId);
+    Console.WriteLine(MealA.FoodList[1].FoodId);
+    Console.WriteLine(MealA.FoodList[2].FoodId);
+
+    Meal MealB = new Meal();
+
+    MealB.FoodList.Add( new Food { FoodId = 5 } );
+    MealB.FoodList.Add( new Food { FoodId = 6 } );
+    MealB.FoodList.Add( new Food { FoodId = 7 } );
+
+    Console.WriteLine(MealB.FoodList[0].FoodId);
+    Console.WriteLine(MealB.FoodList[1].FoodId);
+    Console.WriteLine(MealB.FoodList[2].FoodId);
+
+    Food food8 = new Food { FoodId = 8 };
+    Food food9 = new Food { FoodId = 9 };
+    Food food10 = new Food { FoodId = 10 };
+
+    Console.WriteLine(food8.FoodId);
+    Console.WriteLine(food9.FoodId);
+    Console.WriteLine(food10.FoodId);
+
+    Meal MealC = new Meal 
+    { 
+      FoodList = 
+      { 
+        new Food { FoodId = 11 },
+        new Food { FoodId = 12 },
+        new Food { FoodId = 13 }
+      }  
+    };
+
+    Console.WriteLine(MealC.FoodList[0].FoodId);
+    Console.WriteLine(MealC.FoodList[1].FoodId);
+    Console.WriteLine(MealC.FoodList[2].FoodId);
+
+  }
+
+}
+
+public class Food
+{
+  public int FoodId {get; set;}
+}
+
+public class Meal
+{
+  public List<Food> FoodList = new List<Food>();
+}
+
+

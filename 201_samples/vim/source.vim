@@ -1,4 +1,7 @@
-"vim -S source.vim
+"
+" HELP
+"   For Windows: vim -S vim\source.vim
+"
 :e Program.cs
 :tabnew libs/PartialProgram.cs
 :tabnew libs/_201_libs.cs

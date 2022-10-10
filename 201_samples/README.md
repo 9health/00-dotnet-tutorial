@@ -21,6 +21,8 @@ This code aims to study and test new features in C# which are
 - Test `is` operator, `not` pattern, `and` pattern
 - Test `when` case guard
 - Test EF Core
+- Test EF Core (Refactor)
+- Test EF Core Migration
 
 # Preparation
 
@@ -79,6 +81,8 @@ Test List
 [150]  Test is operator
 [160]  Test when case guard
 [500]  Test EF Core
+[510]  Test EF Core (Refactor)
+[520]  Test EF Core Migration
 
 * Please enter 'q' to exit.
 * Please enter 'l' to list testcases.
@@ -117,6 +121,11 @@ Clean built files
 dotnet clean
 ```
 
+Build project (should be used when modifying files in a large project!)
+```
+dotnet build
+```
+
 Run a specific test from the command line.
 ```
 dotnet run -- [testNumber]
@@ -130,7 +139,14 @@ dotnet run -- 70
 # For EF Core
 References
 
-https://learn.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli
+https://learn.microsoft.com/ef/core/get-started/overview/first-app
+
+Install EF Core packages (optional)
+```
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Design
+```
 
 Create migration files
 ```
@@ -157,6 +173,11 @@ List databases
 List tables
 ```
 .tables
+```
+
+Show column names
+```
+PRAGMA table_info(table_name);
 ```
 
 List all foods

@@ -1,4 +1,14 @@
 
+//========================================================================
+//
+//  Author: 9Health
+//
+//  Changelog:
+//
+//    2022/Sep/2l  v0.1   Newly create
+//
+//========================================================================
+
 using System.ComponentModel.DataAnnotations;
 
 public class NHFoodVerF {
