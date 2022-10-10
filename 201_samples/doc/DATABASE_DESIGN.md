@@ -161,7 +161,7 @@ Same as [Foods table](#foods-table) in [Version 1](#version-1)
 
 ### Foods table
 
-Same as [Version 1](#version-1)
+Same as [Foods table](#foods-table) in [Version 1](#version-1)
 
 ### Meals table
 
