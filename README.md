@@ -28,6 +28,10 @@ Sum from 1 to 10 is 55
 # Other Notes
 
 ## Temporary files
+
+<details><summary>Click here to expand</summary>
+<p>
+
 ```
 $ find obj/ bin/
 obj/
@@ -64,6 +68,10 @@ bin/Debug/net6.0/MyApp.exe
 bin/Debug/net6.0/MyApp.pdb
 bin/Debug/net6.0/MyApp.runtimeconfig.json
 ```
+
+</p>
+</details>
+
 * It shoule be excluded before commiting to Git repository!
 * **Tips**: Add [Visual Studio .gitignore template](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore) while [creating repository on GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)!
 
