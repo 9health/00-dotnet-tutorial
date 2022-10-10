@@ -2,9 +2,14 @@
 
 This describes the food database of this small project.
 
-## Foods table
+## Version 1
 
-### Column information
+### Foods table
+
+<details><summary>Click here to expand</summary>
+<p>
+
+#### Column information
 
 |CID|Name|Type|Not Null|Default Value|Primary Key|
 |:-:|----|:--:|:------:|:-----------:|:---------:|
@@ -23,16 +28,28 @@ This describes the food database of this small project.
 |IngredientNum| Number of ingredients to cook this food  |
 |FoodName     | Name of this food                        |
 
-### Example
+#### Example
 
 |FoodId|FoodTime|FoodSteps|FoodViews|IngredientNum|FoodName|
 |:----:|:------:|:-------:|:-------:|:-----------:|--------|
 |1|10|4|0|0|Trung ran|
 |2|15|0|0|0|Rau cai xao|
 
-## Meal table
+</p>
+</details>
 
-### Column information
+## Version 2
+
+### Foods table
+
+Same as [Version 1.0](#version-1)
+
+### Meals table
+
+<details><summary>Click here to expand</summary>
+<p>
+
+#### Column information
 
 |CID|Name|Type|Not Null|Default Value|Primary Key|
 |:-:|----|:--:|:------:|:-----------:|:---------:|
@@ -46,13 +63,13 @@ This describes the food database of this small project.
 |FoodId       | FoodId references from Foods table    .  |
 |MealName     | Name of the meal                         |
 
-#### Foreign key attributes
+##### Foreign key attributes
 
 |Id|Sql|Table|From|To|On Update|On Delete|Match Text|
 |--|:-:|-----|----|--|:-------:|:-------:|:--------:|
 |||Foods|FoodId|FoodId|NO ACTION|NO ACTION|NONE|
 
-### Example
+#### Example
 
 |MealId|FoodId|MealName|
 |:----:|:----:|--------|
@@ -63,7 +80,10 @@ This describes the food database of this small project.
 |2| 4|An toi|
 |2|13|An toi|
 
-## References
+</p>
+</details>
+
+#### References
 
 * [[O'Reilly.com] List column information for a table](https://www.oreilly.com/library/view/using-sqlite/9781449394592/re205.html)
 * [[Stack Overflow] How to store a list in a db column](https://stackoverflow.com/questions/444251/how-to-store-a-list-in-a-db-column)
