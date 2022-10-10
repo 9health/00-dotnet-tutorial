@@ -65,7 +65,7 @@ Same as [Foods table](#foods-table) in [Version 1](#version-1)
 
 ##### Foreign key attributes
 
-|Id|Sql|Table|From|To|On Update|On Delete|Match Text|
+|Id|Seq|Table|From|To|On Update|On Delete|Match Text|
 |--|:-:|-----|----|--|:-------:|:-------:|:--------:|
 |||Foods|FoodId|FoodId|NO ACTION|NO ACTION|NONE|
 
@@ -119,7 +119,7 @@ Same as [Foods table](#foods-table) in [Version 1](#version-1)
 
 ##### Foreign key attributes
 
-|Id|Sql|Table|From|To|On Update|On Delete|Match Text|
+|Id|Seq|Table|From|To|On Update|On Delete|Match Text|
 |--|:-:|-----|----|--|:-------:|:-------:|:--------:|
 |0|0|Meals|MealId|MealId|NO ACTION|NO ACTION|NONE|
 
