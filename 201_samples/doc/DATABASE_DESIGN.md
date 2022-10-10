@@ -157,4 +157,43 @@ Same as [Version 1](#version-1)
 
 * [[O'Reilly.com] List all foreign keys in the given table](https://www.oreilly.com/library/view/using-sqlite/9781449394592/re176.html)
 
+## Version 4 (another manual design)
 
+### Foods table
+
+Same as [Version 1](#version-1)
+
+### Meals table
+
+Same as [Meals table](#meals-table-1) in [Version 3](#version-3-generated-by-ef-core)
+
+### Reference table
+
+#### Column information
+
+|CID|Name|Type|Not Null|Default Value|Primary Key|
+|:-:|----|:--:|:------:|:-----------:|:---------:|
+|0|RefId|TEXT|1||1|
+|1|MealId|INTEGER|1||0|
+|2|FoodId|INTEGER|1||0|
+
+|Name         |Description                               |
+|-------------|------------------------------------------|
+|RefId        | ID of reference table                    |
+|MealId       | ID of meal                               |
+|FoodId       | FoodId references from Foods table    .  |
+
+#### Examples
+
+|RefId|MealId|FoodId|
+|:---:|:----:|:----:|
+|1|1|2|
+|2|1|3|
+|3|1|4|
+|4|2|1|
+|5|2|2|
+|6|2|3|
+
+### References
+
+* [[Google Books] Effective SQL - Item 2: Eliminate Redundant Storage Data Items](https://books.google.com.vn/books?id=tK7ZDQAAQBAJ)
