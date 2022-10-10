@@ -28,7 +28,7 @@ This describes the food database of this small project.
 |IngredientNum| Number of ingredients to cook this food  |
 |FoodName     | Name of this food                        |
 
-#### Example
+### Example
 
 |FoodId|FoodTime|FoodSteps|FoodViews|IngredientNum|FoodName|
 |:----:|:------:|:-------:|:-------:|:-----------:|--------|
@@ -83,7 +83,7 @@ Same as [Version 1](#version-1)
 </p>
 </details>
 
-#### References
+### References
 
 * [[O'Reilly.com] List column information for a table](https://www.oreilly.com/library/view/using-sqlite/9781449394592/re205.html)
 * [[Stack Overflow] How to store a list in a db column](https://stackoverflow.com/questions/444251/how-to-store-a-list-in-a-db-column)
@@ -123,7 +123,7 @@ Same as [Version 1](#version-1)
 |--|:-:|-----|----|--|:-------:|:-------:|:--------:|
 |0|0|Meals|MealId|MealId|NO ACTION|NO ACTION|NONE|
 
-#### Example
+### Example
 
 |FoodId|FoodTime|FoodSteps|FoodViews|IngredientNum|FoodName|MealId|
 |:----:|:------:|:-------:|:-------:|:-----------:|--------|:----:|
@@ -153,7 +153,7 @@ Same as [Version 1](#version-1)
 </p>
 </details>
 
-#### References
+### References
 
 * [[O'Reilly.com] List all foreign keys in the given table](https://www.oreilly.com/library/view/using-sqlite/9781449394592/re176.html)
 
