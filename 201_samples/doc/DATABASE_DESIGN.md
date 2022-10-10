@@ -169,6 +169,9 @@ Same as [Meals table](#meals-table-1) in [Version 3](#version-3-generated-by-ef-
 
 ### Reference table
 
+<details><summary>Click here to expand</summary>
+<p>
+
 #### Column information
 
 |CID|Name|Type|Not Null|Default Value|Primary Key|
@@ -193,6 +196,9 @@ Same as [Meals table](#meals-table-1) in [Version 3](#version-3-generated-by-ef-
 |4|2|1|
 |5|2|2|
 |6|2|3|
+
+</p>
+</details>
 
 ### References
 
