@@ -202,4 +202,4 @@ Same as [Meals table](#meals-table-1) in [Version 3](#version-3-generated-by-ef-
 
 ### References
 
-* [[Google Books] Effective SQL - Item 2: Eliminate Redundant Storage Data Items]([https://books.google.com.vn/books?id=tK7ZDQAAQBAJ](https://books.google.com.vn/books?id=tK7ZDQAAQBAJ&lpg=PP1&hl=vi&pg=PT11#v=onepage&q&f=false))
+* [[Google Books] Effective SQL - Item 2: Eliminate Redundant Storage Data Items](https://books.google.com.vn/books?id=tK7ZDQAAQBAJ&lpg=PP1&hl=vi&pg=PT11#v=onepage&q&f=false)
