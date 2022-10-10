@@ -197,6 +197,13 @@ Same as [Meals table](#meals-table-1) in [Version 3](#version-3-generated-by-ef-
 |MealId       | ID of meal                               |
 |FoodId       | FoodId references from Foods table    .  |
 
+##### Foreign key attributes
+
+|Id|Seq|Table|From|To|On Update|On Delete|Match Text|
+|--|:-:|-----|----|--|:-------:|:-------:|:--------:|
+|0|0|Meals|MealId|MealId|NO ACTION|NO ACTION|NONE|
+|1|0|Foods|FoodId|FoodId|NO ACTION|NO ACTION|NONE|
+
 #### Examples
 
 |RefId|MealId|FoodId|
