@@ -42,7 +42,7 @@ This describes the food database of this small project.
 
 ### Foods table
 
-Same as [Version 1](#version-1)
+Same as [Foods table](#foods-table) in [Version 1](#version-1)
 
 ### Meals table
 
