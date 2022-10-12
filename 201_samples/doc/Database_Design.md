@@ -167,6 +167,9 @@ Same as [Foods table](#foods-table) in [Version 1](#version-1)
 ### References
 
 * [[O'Reilly.com] List all foreign keys in the given table](https://www.oreilly.com/library/view/using-sqlite/9781449394592/re176.html)
+* [[Microsoft Learn] Creating and configuring a model - EF Core](https://learn.microsoft.com/en-us/ef/core/modeling)
+* [[Microsoft Learn] Keys - EF Core](https://learn.microsoft.com/ef/core/modeling/keys)
+* [[Microsoft Learn] Relationships - EF Core](https://learn.microsoft.com/ef/core/modeling/relationships)
 
 ## Version 4 (another manual design)
 
