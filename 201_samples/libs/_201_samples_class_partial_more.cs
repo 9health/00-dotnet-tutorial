@@ -8,6 +8,7 @@
 //    2022/Oct/12  v0.1    Newly create
 //    2022/Oct/17  v0.2    Add Action delegate test
 //                 v0.2.1  Add multicast Action delegate test
+//                 v0.3.0  Add Function delegate test
 //
 //========================================================================
 
@@ -141,6 +142,22 @@ public partial class _201_samples_class {
 
         MealDisplayAll( sortTimeQuery );
 
+    }
+
+    // Try Func delegate
+    public static void _190_test_func_delegate() {
+
+        Func<NHFoodVerC, bool> isFoodTimeLong; 
+
+        _99_mealCreate();
+
+        isFoodTimeLong = foodVerC => foodVerC is { FoodTime: >= 15 };
+
+        Console.WriteLine("[FoodID] FoodName : IsFoodTimeLongFunc()");
+
+        foreach (var food in mealSampleC.foods) {
+            Console.WriteLine($"[{food.FoodId,+2}] {food.FoodName,-20} : {food.FoodTime,2} ({IsFoodTimeLong(food)})");
+        }
     }
 
 }

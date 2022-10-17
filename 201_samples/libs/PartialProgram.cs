@@ -12,6 +12,7 @@
 //    2022/Oct/12  v0.4    Add delegate testcase
 //    2022/Oct/15  v0.5    Add Action delegate testcase
 //                 v0.5.1  Add multicast Action delegate testcase
+//                 v0.6    Add Func delegate testcase
 //
 //========================================================================
 
@@ -46,6 +47,7 @@ partial class Program {
         { "170"  , "[170]  Test delegate"                },
         { "180"  , "[180]  Test Action delegate"         },
         { "181"  , "[181]  Test multicast Action delegate" },
+        { "190"  , "[190]  Test Func delegate"           },
         { "500"  , "[500]  Test EF Core"                 },
         { "510"  , "[510]  Test EF Core (Refactor)"      },
         { "520"  , "[520]  Test EF Core Migration"       },
@@ -112,6 +114,7 @@ partial class Program {
             case "170" : _201_samples_class._170_test_delegate()          ; break;
             case "180" : _201_samples_class._180_test_action_delegate()   ; break;
             case "181" : _201_samples_class._181_test_m_action_delegate() ; break;
+            case "190" : _201_samples_class._190_test_func_delegate()     ; break;
             case "500" : _201_samples_class._500_test_ef()                ; break;
             case "510" : _201_samples_class._510_test_ef_refactor()       ; break;
             case "520" : _201_samples_class._520_test_ef_migration()      ; break;
