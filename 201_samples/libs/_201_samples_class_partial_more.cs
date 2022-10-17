@@ -6,6 +6,7 @@
 //  Changelog:
 //
 //    2022/Oct/12  v0.1    Newly create
+//    2022/Oct/17  v0.2    Add Action delegate test
 //
 //========================================================================
 
@@ -49,6 +50,43 @@ public partial class _201_samples_class {
         SimpleDelegate callAll = callPrintValues + callPrintJSON;
 
         callAll ( sortTimeQuery );
+
+    }
+
+    // Try Action
+
+    public static void _180_test_action_delegate() {
+
+         Action<IEnumerable> MealDisplayJson;
+
+        _99_mealCreate();
+
+        var sortTimeQuery =
+            from food in mealSampleC.foods
+            orderby food.FoodTime descending
+            select food.FoodName + " (" + food.FoodTime + ")";
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Normal] Food time sort:" );
+        Console.WriteLine( "" );
+
+        _201_libs.PrintValuesJson( sortTimeQuery );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Using Action] Food time sort:" );
+        Console.WriteLine( "" );
+
+        MealDisplayJson = ie =>_201_libs.PrintValuesJson(ie) ;
+
+        MealDisplayJson( sortTimeQuery );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Using Action 2] Food time sort:" );
+        Console.WriteLine( "" );
+
+        MealDisplayJson = delegate (IEnumerable ie) { _201_libs.PrintValuesJson(ie); };
+
+        MealDisplayJson( sortTimeQuery );
 
     }
 
