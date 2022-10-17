@@ -7,6 +7,7 @@
 //
 //    2022/Oct/12  v0.1    Newly create
 //    2022/Oct/17  v0.2    Add Action delegate test
+//                 v0.2.1  Add multicast Action delegate test
 //
 //========================================================================
 
@@ -87,6 +88,58 @@ public partial class _201_samples_class {
         MealDisplayJson = delegate (IEnumerable ie) { _201_libs.PrintValuesJson(ie); };
 
         MealDisplayJson( sortTimeQuery );
+
+    }
+
+    // Try Action Multicast
+
+    public static void _181_test_m_action_delegate() {
+
+         Action<IEnumerable> MealDisplay;
+         Action<IEnumerable> MealDisplayJson;
+         Action<IEnumerable> MealDisplayAll;
+
+        _99_mealCreate();
+
+        var sortTimeQuery =
+            from food in mealSampleC.foods
+            orderby food.FoodTime descending
+            select food.FoodName + " (" + food.FoodTime + ")";
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Normal] Food time sort:" );
+        Console.WriteLine( "" );
+
+        _201_libs.PrintValues    ( sortTimeQuery );
+        _201_libs.PrintValuesJson( sortTimeQuery );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Using Action] Food time sort:" );
+        Console.WriteLine( "" );
+
+        MealDisplay     = ie =>_201_libs.PrintValues    (ie) ;
+        MealDisplayJson = ie =>_201_libs.PrintValuesJson(ie) ;
+
+        MealDisplay    ( sortTimeQuery );
+        MealDisplayJson( sortTimeQuery );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Using Action 2] Food time sort:" );
+        Console.WriteLine( "" );
+
+        MealDisplay     = delegate (IEnumerable ie) { _201_libs.PrintValues    (ie); };
+        MealDisplayJson = delegate (IEnumerable ie) { _201_libs.PrintValuesJson(ie); };
+
+        MealDisplay    ( sortTimeQuery );
+        MealDisplayJson( sortTimeQuery );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Using multicast Action] Food time sort:" );
+        Console.WriteLine( "" );
+
+        MealDisplayAll = MealDisplay + MealDisplayJson;
+
+        MealDisplayAll( sortTimeQuery );
 
     }
 
