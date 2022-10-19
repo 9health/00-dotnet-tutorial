@@ -10,6 +10,7 @@
 //                 v0.2.1  Add multicast Action delegate test
 //                 v0.3    Add Function delegate test
 //    2022/Oct/18  v0.4    Add null delegate test
+//    2022/Oct/19  v0.5    Add comparison delegate test
 //
 //========================================================================
 
@@ -226,6 +227,45 @@ public partial class _201_samples_class {
         catch (Exception e) {
             Console.WriteLine($"  [EXCP] Exception happened. e.GetType() = {e.GetType()}");
         }
+
+    }
+
+    // Try comparison delegate
+    // References: https://learn.microsoft.com/dotnet/csharp/delegate-class
+
+    private static int compareByLength(NHFoodVerC left, NHFoodVerC right) =>
+        left.FoodName.Length.CompareTo(right.FoodName.Length);
+
+    public static void _210_test_comp_delegate() {
+
+        _99_mealCreate();
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Normal] Food time sort:" );
+
+        _201_libs.PrintValuesJson( mealSampleC.foods );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[1st try] Food name's length sort:" );
+
+        mealSampleC.foods.Sort( compareByLength );
+
+        _201_libs.PrintValuesJson( mealSampleC.foods );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[2nd try] Food name's length sort:" );
+
+        mealSampleC.foods.Sort( (left, right) => left.FoodName.Length.CompareTo(right.FoodName.Length) );
+
+        _201_libs.PrintValuesJson( mealSampleC.foods );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[3rd try] Food name's length sort:" );
+
+        Comparison<NHFoodVerC> comparer = (left, right) => left.FoodName.Length.CompareTo(right.FoodName.Length) ;
+        mealSampleC.foods.Sort( comparer );
+
+        _201_libs.PrintValuesJson( mealSampleC.foods );
 
     }
 
