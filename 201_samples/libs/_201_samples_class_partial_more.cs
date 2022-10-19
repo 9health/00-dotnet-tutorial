@@ -11,6 +11,8 @@
 //                 v0.3    Add Function delegate test
 //    2022/Oct/18  v0.4    Add null delegate test
 //    2022/Oct/19  v0.5    Add comparison delegate test
+//    2022/Oct/19  v0.6    Add comparison delegate test
+//                 v0.7    Add event handler delegate test
 //
 //========================================================================
 
@@ -163,7 +165,7 @@ public partial class _201_samples_class {
     }
 
     // Try null delegate testcase
-    // References: https://learn.microsoft.com/en-us/dotnet/csharp/delegates-patterns#handle-null-delegates
+    // References: https://learn.microsoft.com/dotnet/csharp/delegates-patterns#handle-null-delegates
 
     public static void _200_test_null_delegate() {
 
@@ -264,6 +266,39 @@ public partial class _201_samples_class {
 
         Comparison<NHFoodVerC> comparer = (left, right) => left.FoodName.Length.CompareTo(right.FoodName.Length) ;
         mealSampleC.foods.Sort( comparer );
+
+        _201_libs.PrintValuesJson( mealSampleC.foods );
+
+    }
+
+    // Try event handler delegate testcase
+    // Reference: https://learn.microsoft.com/dotnet/api/system.eventhandler
+
+    private static void c_LimitReached(object sender, MealEventArgs e) {
+        Console.WriteLine( $"Limit {e.FoodLimit} is reached at {e.TimeReached}" );
+        Console.WriteLine( "Exiting..." );
+        Environment.Exit(0);
+    }
+
+    public static void _220_test_e_handler_delegate() {
+
+        var rand = new Random();
+        var randDouble = rand.NextDouble();
+
+        Console.WriteLine( $"[INFO] randDouble = {randDouble}" );
+
+        _99_mealCreateNew();
+
+        // Subscribe (attach) to mealSampleC event
+        mealSampleC.LimitReached += c_LimitReached;
+
+        if ( randDouble >= 0.5 ) {
+            mealSampleC.SetFoodLimit(15);
+        } else {
+            mealSampleC.SetFoodLimit(5);
+        }
+
+        _99_mealAddFood();
 
         _201_libs.PrintValuesJson( mealSampleC.foods );
 

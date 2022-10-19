@@ -15,6 +15,7 @@
 //                 v0.6    Add Func delegate testcase
 //    2022/Oct/18  v0.7    Add null delegate testcase
 //    2022/Oct/19  v0.8    Add comparison delegate testcase
+//                 v0.9    Add event handler delegate testcase
 //
 //========================================================================
 
@@ -52,6 +53,7 @@ partial class Program {
         { "190"  , "[190]  Test Func delegate"           },
         { "200"  , "[200]  Test null delegate"           },
         { "210"  , "[210]  Test comparison delegate"     },
+        { "220"  , "[220]  Test event handler delegate"  },
         { "500"  , "[500]  Test EF Core"                 },
         { "510"  , "[510]  Test EF Core (Refactor)"      },
         { "520"  , "[520]  Test EF Core Migration"       },
@@ -121,6 +123,7 @@ partial class Program {
             case "190" : _201_samples_class._190_test_func_delegate()     ; break;
             case "200" : _201_samples_class._200_test_null_delegate()     ; break;
             case "210" : _201_samples_class._210_test_comp_delegate()     ; break;
+            case "220" : _201_samples_class._220_test_e_handler_delegate(); break;
             case "500" : _201_samples_class._500_test_ef()                ; break;
             case "510" : _201_samples_class._510_test_ef_refactor()       ; break;
             case "520" : _201_samples_class._520_test_ef_migration()      ; break;
