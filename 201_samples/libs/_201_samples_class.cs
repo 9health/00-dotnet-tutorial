@@ -1,4 +1,17 @@
 
+//========================================================================
+//
+//  Author: 9Health
+//
+//  Changelog:
+//
+//    2022/Sep/06  v0.1    Newly create
+//    2022/Sep/..  v...    Many changes
+//
+//    2022/Oct/19  v1.0    Split MealVerC instantiation to another function
+//
+//========================================================================
+
 using System.Diagnostics;
 using System.Text.Json;
 
@@ -235,9 +248,14 @@ public partial class _201_samples_class {
     private static MealVerC mealSampleC;
 
     // Create a private sample meal
+
+    private static void _99_mealCreateNew() {
+        mealSampleC = new MealVerC();
+    }
+
     private static void _99_mealCreate() {
 
-        mealSampleC = new MealVerC();
+        _99_mealCreateNew();
 
         mealSampleC.AddFood( 1, "Trung ran"       , 10 ) ;
         mealSampleC.AddFood( 2, "Rau cai xao"     , 15 ) ;
