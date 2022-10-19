@@ -29,6 +29,10 @@ public class MealVerC : IEnumerable {
     }
 
     // Public methods
+    public void SetFoodLimit ( int passedLimit ) {
+        foodLimit = passedLimit ;
+    }
+
     public void AddFood(int foodID, string foodName, int foodTime) {
 
         foods.Add(new NHFoodVerC { FoodId = foodID, FoodName = foodName, FoodTime = foodTime } );
