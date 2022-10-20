@@ -127,9 +127,9 @@ Run the project
 dotnet run
 ```
 
-Release _framework-dependent_ binary files
+Release _framework-dependent_ binary files (output in `publish` folder)
 ```
-dotnet publish --self-contained false -c Release -r win-x64
+dotnet publish --self-contained false -c Release -p:PublishSingleFile=true -r win-x64
 ```
 
 Clean built files
