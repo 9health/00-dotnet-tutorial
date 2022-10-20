@@ -28,7 +28,7 @@ public partial class _201_samples_class {
 
         _99_mealCreate();
 
-        var sortTimeQuery = 
+        var sortTimeQuery =
             from food in mealSampleC.foods
             orderby food.FoodTime descending
             select food.FoodName + " (" + food.FoodTime + ")";
@@ -205,7 +205,7 @@ public partial class _201_samples_class {
     // Try Func delegate
     public static void _190_test_func_delegate() {
 
-        Func<NHFoodVerC, bool> isFoodTimeLong; 
+        Func<NHFoodVerC, bool> isFoodTimeLong;
 
         _99_mealCreate();
 
