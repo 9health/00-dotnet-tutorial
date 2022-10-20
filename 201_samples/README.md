@@ -20,6 +20,14 @@ This code aims to study and test new features in C# which are
 - Test `switch` expression
 - Test `is` operator, `not` pattern, `and` pattern
 - Test `when` case guard
+- Test `delegate`
+- Test `delegate` argument
+- Test `Action` delegate
+- Test multicast `Action` delegate
+- Test `Func` delegate
+- Test `null` delegate
+- Test comparison delegate
+- Test `event` handler delegate
 - Test EF Core
 - Test EF Core (Refactor)
 - Test EF Core Migration
@@ -80,6 +88,14 @@ Test List
 [140]  Test switch expression
 [150]  Test is operator
 [160]  Test when case guard
+[170]  Test delegate
+[171]  Test delegate argument
+[180]  Test Action delegate
+[181]  Test multicast Action delegate
+[190]  Test Func delegate
+[200]  Test null delegate
+[210]  Test comparison delegate
+[220]  Test event handler delegate
 [500]  Test EF Core
 [510]  Test EF Core (Refactor)
 [520]  Test EF Core Migration

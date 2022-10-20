@@ -1,14 +1,53 @@
 
+//========================================================================
+//
+//  Author: 9Health
+//
+//  Changelog:
+//
+//    2022/Sep/14  v0.1    Newly create
+//    2022/Oct/19  v0.2    Add food number limitation
+//                         Add MealEventArgs
+//
+//========================================================================
+
 using System.Collections;
 
 public class MealVerC : IEnumerable {
 
+    // Properties
+    private  int  foodLimit ;
+
+    public   event EventHandler<MealEventArgs> LimitReached ;
+
     // Members
     public List<NHFoodVerC> foods = new List<NHFoodVerC>();
 
+    // Constructor
+    public MealVerC () {
+        foodLimit = 20;
+    }
+
     // Public methods
+    public void SetFoodLimit ( int passedLimit ) {
+        foodLimit = passedLimit ;
+    }
+
     public void AddFood(int foodID, string foodName, int foodTime) {
+
         foods.Add(new NHFoodVerC { FoodId = foodID, FoodName = foodName, FoodTime = foodTime } );
+
+        if ( foods.Count >= foodLimit ) {
+
+            MealEventArgs args = new MealEventArgs() ;
+
+            args.FoodLimit   = foodLimit    ;
+            args.TimeReached = DateTime.Now ;
+
+            // Raise limit reached event
+            // Continue even when there is no event is attached (subscribed)
+            LimitReached ?. Invoke(this, args);
+        }
     }
 
     public IEnumerator GetEnumerator() {
@@ -58,6 +97,13 @@ public class MealVerC : IEnumerable {
             }
         }
     }
+
+}
+
+public class MealEventArgs : EventArgs {
+
+    public  int      FoodLimit   { get; set; }
+    public  DateTime TimeReached { get; set; }
 
 }
 
