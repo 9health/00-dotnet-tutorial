@@ -16,6 +16,7 @@
 //    2022/Oct/18  v0.7    Add null delegate testcase
 //    2022/Oct/19  v0.8    Add comparison delegate testcase
 //                 v0.9    Add event handler delegate testcase
+//    2022/Oct/20  v0.9.1  Add delegate argument testcase
 //
 //========================================================================
 
@@ -48,6 +49,7 @@ partial class Program {
         { "150"  , "[150]  Test is operator"             },
         { "160"  , "[160]  Test when case guard"         },
         { "170"  , "[170]  Test delegate"                },
+        { "171"  , "[171]  Test delegate argument"       },
         { "180"  , "[180]  Test Action delegate"         },
         { "181"  , "[181]  Test multicast Action delegate" },
         { "190"  , "[190]  Test Func delegate"           },
@@ -118,6 +120,7 @@ partial class Program {
             case "150" : _201_samples_class._150_test_is_operator()       ; break;
             case "160" : _201_samples_class._160_test_when_guard()        ; break;
             case "170" : _201_samples_class._170_test_delegate()          ; break;
+            case "171" : _201_samples_class._171_test_delegate_arg()      ; break;
             case "180" : _201_samples_class._180_test_action_delegate()   ; break;
             case "181" : _201_samples_class._181_test_m_action_delegate() ; break;
             case "190" : _201_samples_class._190_test_func_delegate()     ; break;

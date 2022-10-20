@@ -13,6 +13,7 @@
 //    2022/Oct/19  v0.5    Add comparison delegate test
 //    2022/Oct/19  v0.6    Add comparison delegate test
 //                 v0.7    Add event handler delegate test
+//    2022/Oct/20  v0.7.1  Add delegate argument test
 //
 //========================================================================
 
@@ -56,6 +57,59 @@ public partial class _201_samples_class {
         SimpleDelegate callAll = callPrintValues + callPrintJSON;
 
         callAll ( sortTimeQuery );
+
+    }
+
+    // Try delegate as argument
+    // Reference: https://learn.microsoft.com/dotnet/csharp/programming-guide/delegates/using-delegates
+
+    public delegate int DCalc ( int x, int y );
+
+    public static int Calc( int x, int y, DCalc funcCalc ) =>
+        funcCalc(x, y);
+
+    public static int DoSum( int x, int y) =>
+        x + y;
+
+    public static int DoSub( int x, int y ) =>
+        x - y;
+
+    public static void _171_test_delegate_arg() {
+
+        _99_mealCreate();
+
+        var sortTimeQuery =
+            from food in mealSampleC.foods
+            where ( food.FoodId < 3 )
+            select food;
+
+        _201_libs.PrintValuesJson( sortTimeQuery );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Passed by method] Food time calculation:" );
+
+        var sumFoodTime = Calc( mealSampleC.foods[0].FoodTime, mealSampleC.foods[1].FoodTime, DoSum );
+
+        Console.WriteLine( $"Sum of food time is {sumFoodTime} minutes" );
+
+        var subFoodTime = Calc( mealSampleC.foods[0].FoodTime, mealSampleC.foods[1].FoodTime, DoSub );
+
+        Console.WriteLine( $"Sub of food time is {subFoodTime} minutes" );
+
+        Console.WriteLine( "================================================" );
+        Console.WriteLine( "[Passed by handler] Food time calculation:" );
+
+        DCalc handler = DoSum;
+
+        sumFoodTime = Calc( mealSampleC.foods[0].FoodTime, mealSampleC.foods[1].FoodTime, handler );
+
+        Console.WriteLine( $"Sum of food time is {sumFoodTime} minutes" );
+
+        handler = DoSub;
+
+        subFoodTime = Calc( mealSampleC.foods[0].FoodTime, mealSampleC.foods[1].FoodTime, DoSub );
+
+        Console.WriteLine( $"Sub of food time is {subFoodTime} minutes" );
 
     }
 
