@@ -13,4 +13,4 @@ That allows adding or removing families of objects produced together without imp
 In our case, the family (the object set the factory can produce) is composed of a car and a bike, and
 each factory (family) must produce both of those objects.
 
-![alt text](https://github.com/9health/00-dotnet-tutorial/tree/DP-Abstract-Factory?raw=true)
+![alt text]([https://github.com/9health/00-dotnet-tutorial/blob/DP-Abstract-Factory/DP-Abstract-factory.jpg?raw=true)
