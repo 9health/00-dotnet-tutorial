@@ -11,4 +11,4 @@ context class. That way, when the consumer calls the context, the context does n
 where the data comes from, how it is fetched, or what strategy is in use; it only gets what it needs to
 work, delegating the fetching responsibility to an abstracted strategy.
 
-![alt text](https://github.com/9health/00-dotnet-tutorial/blob/DP-Strategy/image.jpg?raw=true)
+![alt text](https://github.com/9health/00-dotnet-tutorial/blob/DP-Strategy/DP-Strategy.jpg?raw=true)
