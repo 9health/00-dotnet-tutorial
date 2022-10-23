@@ -14,3 +14,8 @@ In our case, the family (the object set the factory can produce) is composed of 
 each factory (family) must produce both of those objects.
 
 ![alt text](https://github.com/9health/00-dotnet-tutorial/blob/DP-Abstract-Factory/DP-Abstract-factory.jpg?raw=true)
+
+The diagram bellow shows the structure:
+The Application uses the ``ConcreteImpl`` through the Service interface. However, the Application must somehow create instances of the ``ConcreteImpl``. To achieve this without creating a source code dependency on the ``ConcreteImpl``, the Application calls the ``makeSvc`` method of the ``ServiceFactory`` interface. This method is implemented by the ``ServiceFactoryImpl`` class, which derives from ``ServiceFactory``. That implementation instantiates the ``ConcreteImpl`` and returns it as a ``Service``.
+
+![alt text](https://github.com/9health/00-dotnet-tutorial/blob/DP-Abstract-Factory/DP-Abstract-factoryxDI.jpg?raw=true)
