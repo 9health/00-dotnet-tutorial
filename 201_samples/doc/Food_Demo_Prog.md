@@ -17,4 +17,6 @@ This is a sample food program to input foods and meals from CLI with provided cl
   - .NET EF Core using SQLite
 - API-oriented
 
+# Basic Design
+
 # Detailed Design
