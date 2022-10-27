@@ -62,6 +62,8 @@ This is a sample food program to input foods and meals from CLI with provided cl
 
 ### Flow Level 2
 
+**T.B.U**
+
 ### Notes
 - FDP is synonym for Food Demo Program
 - If there are **30,000** foods at `S10`, should it be listed all?
@@ -100,6 +102,7 @@ This is a sample food program to input foods and meals from CLI with provided cl
       DELETE | Foods | ID | 5
       LIST
       ```
+  - Reg is synomnym for register that is used when test ALU in CPU!!! _Please recommend better word if you can!_.
 
 - How to test code efficiently? For example: when code is updated and regression is ran, PASSED or FAILED testcases should be reported.
 
