@@ -82,6 +82,22 @@ This is a sample food program to input foods and meals from CLI with provided cl
         - `Food Name | Food Time | Food Steps | Food Views | IngredientNum`
       - For `Meals` register
         - `Meal Name | FoodId Item 1, FoodId Item 2`
+    - Example
+      ```
+      LIST   | Foods
+      CREATE | Foods | Trung ran   | 10
+      CREATE | Foods | Rau cai xao | 15
+      CREATE | Foods | Thit luoc   | 20
+      CREATE | Foods | Nuoc mam    | 4
+      CREATE | Foods | Rau muong luoc | 20
+      CREATE | Foods | Dau phu luoc   | 5
+      CREATE | Foods | Nem ran        | 60
+      LIST
+      UPDATE | Foods | ID | 3 | 4
+      LIST
+      DELETE | Foods | ID | 5
+      LIST
+      ```
 
 - How to test code efficiently? For example: when code is updated and regression is ran, PASSED or FAILED testcases should be reported.
 
