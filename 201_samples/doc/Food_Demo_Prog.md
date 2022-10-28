@@ -76,7 +76,7 @@ This is a sample food program to input foods and meals from CLI with provided cl
       - `CREATE`
       - `UPDATE`
       - `DELETE`
-      - `Search`
+      - `SEARCH`
     - Register `REG` are
       - `Foods`
       - `Meals`
