@@ -75,6 +75,10 @@ This is a sample food program to input foods and meals from CLI with provided cl
 - How to parition FDP to reuse or extend functionality later?
 - `csv` input file is only used to input large number of foods. How to control FDP from command line such as delete foods?
   - Use more general file such as command file `cmd.txt` to interact with FDP
+
+  <details>
+    <summary>Click here to expand</summary>
+
   - `cmd.txt` format is `CMD | REG | VAL`
     - Commands `CMD` are
       - `LIST`
@@ -108,6 +112,7 @@ This is a sample food program to input foods and meals from CLI with provided cl
       LIST
       ```
   - Reg is synomnym for register that is used when test ALU in CPU!!! _Please recommend better word if you can!_.
+  </details>
 
 - How to test code efficiently? For example: when code is updated and regression is ran, PASSED or FAILED testcases should be reported.
 
