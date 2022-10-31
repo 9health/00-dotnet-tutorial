@@ -27,6 +27,9 @@ This is a sample food program to input foods and meals from CLI with provided cl
 
 ### Flow Level 1
 
+<details>
+  <summary>Click here to expand</summary>
+
 `S00` What do you want to do?
   1. List (or output) => `S10`
   2. Create (or add, input)  => `S20`
@@ -59,6 +62,8 @@ This is a sample food program to input foods and meals from CLI with provided cl
   1. Foods
   2. Meals
   3. All (_optional_)
+
+</details>
 
 ### Flow Level 2
 
