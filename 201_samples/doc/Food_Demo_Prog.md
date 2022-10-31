@@ -25,7 +25,7 @@ This is a sample food program to input foods and meals from CLI with provided cl
 ### Principles
 - CRUD (create, read, update, delete)
 
-### Flow Level 1
+### CLI Flow Level 1
 
 <details>
   <summary>Click here to expand</summary>
@@ -65,7 +65,7 @@ This is a sample food program to input foods and meals from CLI with provided cl
 
 </details>
 
-### Flow Level 2
+### CLI Flow Level 2
 
 **T.B.U**
 
