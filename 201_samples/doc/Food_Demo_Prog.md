@@ -69,6 +69,18 @@ This is a sample food program to input foods and meals from CLI with provided cl
 
 **T.B.U**
 
+### All flowcharts
+
+```mermaid
+  graph LR;
+    subgraph CMD Flow
+      CMD_TXT[/cmd.txt/] --> |read line by line| CMD_PROC[CmdProcess] --> |LINQ| Database[(Database)];
+    end
+    subgraph CLI Flow
+      CLI --> |a, b, c, 1, 2, 3| CLI_PARSER[CliParser] --> CMD_PROC[CmdProcess];      
+    end
+```
+
 ### Notes
 - FDP is synonym for Food Demo Program
 - If there are **30,000** foods at `S10`, should it be listed all?
@@ -117,3 +129,5 @@ This is a sample food program to input foods and meals from CLI with provided cl
 - How to test code efficiently? For example: when code is updated and regression is ran, PASSED or FAILED testcases should be reported.
 
 # Detailed Design
+
+
