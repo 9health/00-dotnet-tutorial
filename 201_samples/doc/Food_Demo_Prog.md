@@ -37,6 +37,7 @@ This is a sample food program to input foods and meals from CLI with provided cl
 
 ### Principles
 - CRUD (create, read, update, delete)
+- SOLID pattern
 
 ### CLI Flow Level 1
 
@@ -102,6 +103,13 @@ This is a sample food program to input foods and meals from CLI with provided cl
       API[API GET/PUT] <--> JSON_PROC[JsonSerializer/JsonDeserializer] <--> CMD_PROC[CmdProcess];
     end
 ```
+
+### Classes
+
+1. CMD Class
+2. CLI Class
+3. CSV Class
+4. JsonFood Class
 
 ### Notes
 - FDP is synonym for Food Demo Program
