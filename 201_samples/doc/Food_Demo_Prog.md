@@ -1,4 +1,17 @@
 
+# Table of Contents
+
+- Description
+- Requirements
+- Basic Design
+  - CLI User Interface/User Interaction
+    -  Principles
+    - CLI Flow Level 1
+    - CLI Flow Level 2
+    - All flowcharts
+    - Notes
+- Detailed Design
+
 # Description
 
 This is a sample food program to input foods and meals from CLI with provided classes from `201_samples` library.
