@@ -158,6 +158,11 @@ This is a sample food program to input foods and meals from CLI with provided cl
 
 - How to test code efficiently? For example: when code is updated and regression is ran, PASSED or FAILED testcases should be reported.
 
+### References
+
+- [[Google Books] Systems Analysis and Design: An Object-Oriented Approach with UML](https://books.google.com/books?id=rbLrBgAAQBAJ)
+- [[Wikipedia] Systems development life cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
+
 # Detailed Design
 
 
