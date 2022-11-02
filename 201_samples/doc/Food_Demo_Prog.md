@@ -85,12 +85,20 @@ This is a sample food program to input foods and meals from CLI with provided cl
 ### All flowcharts
 
 ```mermaid
-  graph LR;
+  flowchart LR;
     subgraph CMD Flow
-      CMD_TXT[/cmd.txt/] --> |read line by line| CMD_PROC[CmdProcess] --> |LINQ| Database[(Database)];
+      CMD_TXT[/cmd.txt/] --> |read line by line| CMD_PROC[CmdProcess] <--> |LINQ| Database[(Database)];
     end
     subgraph CLI Flow
-      CLI --> |a, b, c, 1, 2, 3| CLI_PARSER[CliParser] --> CMD_PROC[CmdProcess];      
+      CLI <--> |a, b, c, 1, 2, 3| CLI_PARSER[CliParser] <--> CMD_PROC[CmdProcess];
+    end
+    subgraph Batch Input Flow
+      FOOD_CSV[/food.csv/] --> CSV_PARSER[CsvParser] --> CMD_PROC[CmdProcess];
+    end
+    subgraph JSON/WebAPI Flow
+      FROM_WEB[/Web\] <--> API
+      FROM_APP[/App\] <--> API      
+      API[API GET/PUT] <--> JSON_PROC[JsonSerializer/JsonDeserializer] <--> CMD_PROC[CmdProcess];
     end
 ```
 
