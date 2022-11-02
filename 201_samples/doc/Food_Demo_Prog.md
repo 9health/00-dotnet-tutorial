@@ -5,7 +5,7 @@
 - Requirements
 - Basic Design
   - CLI User Interface/User Interaction
-    -  Principles
+    - Principles
     - CLI Flow Level 1
     - CLI Flow Level 2
     - All flowcharts
