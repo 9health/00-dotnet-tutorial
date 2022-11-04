@@ -112,7 +112,8 @@ This is a sample food program to input foods and meals from CLI with provided cl
 4. JsonFood Class
 
 ### Notes
-- FDP is synonym for Food Demo Program
+- FDP is synonym for Food Demo Program.
+- S is synonym for State.
 - If there are **30,000** foods at `S10`, should it be listed all?
 - How to parition FDP to reuse or extend functionality later?
 - `csv` input file is only used to input large number of foods. How to control FDP from command line such as delete foods?
