@@ -77,6 +77,8 @@ This is a sample food program to input foods and meals from CLI with provided cl
   2. Meals
   3. All (_optional_)
 
+If an invalid option is entered, the question will be appeared again!
+
 </details>
 
 ### CLI Flow Level 2
