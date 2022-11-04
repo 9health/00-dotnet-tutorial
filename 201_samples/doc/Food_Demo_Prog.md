@@ -87,17 +87,17 @@ This is a sample food program to input foods and meals from CLI with provided cl
 
 ```mermaid
   flowchart LR;
-    subgraph CMD Flow
+    subgraph CMD Flow - Flow 1
       CMD_TXT[/cmd.txt/] --> |read line by line| CMD_PROC[CmdProcess] <--> |LINQ| Database[(Database)];
       CMD_PROC --> TERMINAL_LOG[TerminalLog]
     end
-    subgraph CLI Flow
+    subgraph CLI Flow - Flow 2
       CLI <--> |a, b, c, 1, 2, 3| CLI_PARSER[CliParser] <--> CMD_PROC[CmdProcess];
     end
-    subgraph Batch Input Flow
+    subgraph Batch Input Flow - Flow 3
       FOOD_CSV[/food.csv/] --> CSV_PARSER[CsvParser] --> CMD_PROC[CmdProcess];
     end
-    subgraph JSON/WebAPI Flow
+    subgraph JSON/WebAPI Flow - Flow 4
       FROM_WEB[/Web\] <--> API
       FROM_APP[/App\] <--> API      
       API[API GET/PUT] <--> JSON_PROC[JsonSerializer/JsonDeserializer] <--> CMD_PROC[CmdProcess];
