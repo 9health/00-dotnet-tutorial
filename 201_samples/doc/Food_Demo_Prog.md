@@ -162,6 +162,7 @@ This is a sample food program to input foods and meals from CLI with provided cl
 
 - [[Google Books] Systems Analysis and Design: An Object-Oriented Approach with UML](https://books.google.com/books?id=rbLrBgAAQBAJ)
 - [[Wikipedia] Systems development life cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle)
+- [[Wikipedia] SOLID](https://en.wikipedia.org/wiki/SOLID)
 
 # Detailed Design
 
