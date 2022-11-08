@@ -83,7 +83,175 @@ If an invalid option is entered, the question will be appeared again!
 
 ### CLI Flow Level 2
 
-**T.B.U**
+<details>
+  <summary>Click here to expand</summary>
+
+```
+S21 Create food
+
+[CREATE] Please enter food name:
+[CREATE] Please enter food steps:
+
+[CREATE] Review:
+
+Food name:
+Food steps:
+
+[CREATE] Save (Y/N)?
+
+[CREATE] OK
+or
+[CREATE] NG
+
+Go back to S00
+```
+
+```
+S22 Create meal
+
+[CREATE] Please enter meal name:
+[CREATE] Please enter food ID list:
+
+[CREATE] Review:
+
+Meal name:
+Food list:
+Food name list:
+
+[CREATE] Save (Y/N)?
+
+[CREATE] OK
+or
+[CREATE] NG
+
+Go back to S00
+```
+
+```
+S31 Update food
+
+[UPDATE] Please enter food ID:
+
+[UPDATE] Review:
+
+Food name:
+Food steps:
+
+[UPDATE] Please enter new food name:
+[UPDATE] Please enter new food steps:
+
+[UPDATE] Review:
+
+New food name:
+New food steps:
+
+[UPDATE] Save (Y/N)?
+
+[UPDATE] OK
+or
+[UPDATE] NG
+
+Go back to S00
+```
+
+```
+S32 Update meal
+
+[UPDATE] Please enter meal ID:
+
+[UPDATE] Review:
+
+Meal name:
+Food list:
+Food name list:
+
+[UPDATE] Please enter new  meal name:
+[UPDATE] Please enter new food ID list:
+
+[UPDATE] Review:
+
+New meal name:
+New food list:
+New food name list:
+
+[UPDATE] Save (Y/N)?
+
+[UPDATE] OK
+or
+[UPDATE] NG
+
+Go back to S00
+```
+
+```
+S41 Delete food
+
+[DELETE] Please enter food ID:
+
+[DELETE] Review:
+
+Food name:
+Food steps:
+
+[UPDATE] Save (Y/N)?
+
+[UPDATE] OK
+or
+[UPDATE] NG
+
+Go back to S00
+```
+
+```
+S42 Delete meal
+
+[DELETE] Please enter meal ID:
+
+[DELETE] Save (Y/N)?
+
+[DELETE] OK
+or
+[DELETE] NG
+
+Go back to S00
+```
+
+```
+S43 Delete all
+
+[DELETE] Please be very careful!!!
+
+[DELETE] Save (Y/N)?
+
+[DELETE] OK
+or
+[DELETE] NG
+
+Go back to S00
+```
+
+```
+S50 Search food
+
+[SEARCH] Please enter food ID:
+
+Food name:
+Food steps:
+```
+
+```
+S51 Search meal
+
+[SEARCH] Please enter meal ID:
+
+[SEARCH] Review:
+
+Meal name:
+Food list:
+Food name list:
+```
+
+</details>
 
 ### All flowcharts
 
