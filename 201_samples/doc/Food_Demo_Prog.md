@@ -31,6 +31,8 @@ This is a sample food program to input foods and meals from CLI with provided cl
   - .NET EF Core using SQLite
 - API-oriented
 - Code should be tested easily (**Design for Test**)
+- Program should not be used too much memory
+  - Use number of `String` type as small as possible
 
 # Basic Design
 
