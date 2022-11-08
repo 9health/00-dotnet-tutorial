@@ -8,6 +8,7 @@
     - Principles
     - CLI Flow Level 1
     - CLI Flow Level 2
+    - CLI Flow Chart
     - All flowcharts
     - Notes
 - Detailed Design
@@ -253,7 +254,48 @@ Food name list:
 
 </details>
 
-### All flowcharts
+### CLI Flowcharts
+
+```mermaid
+  flowchart LR
+    subgraph Start Flow
+      S00([S00_Start]) --> S10[S10_List]
+      S00([S00_Start]) --> S20[S20_Create]
+      S00([S00_Start]) --> S30[S10_Update]
+      S00([S00_Start]) --> S40[S10_Delete]
+      S00([S00_Start]) --> S50[S10_Search]
+    end
+    subgraph Create Flow
+      S20 --> S21[S21_CreateFood]
+      S20 --> S22[S22_CreateMeal]
+      S21 --> S99([S00_Start])
+      S22 --> S99
+    end
+    subgraph Update Flow
+      S30 --> S31[S31_UpdateFood]
+      S30 --> S32[S32_UpdateMeal]
+      S31 --> S99
+      S32 --> S99
+    end
+    subgraph Delete Flow
+      S40 --> S41[S41_DeleteFood]
+      S40 --> S42[S42_DeleteMeal]
+      S40 --> S43[S42_DeleteAll]
+      S41 --> S99
+      S42 --> S99
+      S43 --> S99
+    end
+    subgraph Search Flow
+      S50 --> S51[S51_SearchFood]
+      S50 --> S52[S52_SearchMeal]
+      S51 --> S99
+      S52 --> S99
+    end
+
+```
+
+
+### All Flowcharts
 
 ```mermaid
   flowchart LR;
