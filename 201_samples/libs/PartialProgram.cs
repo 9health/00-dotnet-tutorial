@@ -17,6 +17,7 @@
 //    2022/Oct/19  v0.8    Add comparison delegate testcase
 //                 v0.9    Add event handler delegate testcase
 //    2022/Oct/20  v0.9.1  Add delegate argument testcase
+//    2022/Oct/24  v1.0    Pre-add for CLI food db program version A
 //
 //========================================================================
 
@@ -59,6 +60,7 @@ partial class Program {
         { "500"  , "[500]  Test EF Core"                 },
         { "510"  , "[510]  Test EF Core (Refactor)"      },
         { "520"  , "[520]  Test EF Core Migration"       },
+        { "600"  , "[600]  Test EF Core Migration"       },
     };
 
     public static void InteractiveProcess() {
@@ -130,6 +132,7 @@ partial class Program {
             case "500" : _201_samples_class._500_test_ef()                ; break;
             case "510" : _201_samples_class._510_test_ef_refactor()       ; break;
             case "520" : _201_samples_class._520_test_ef_migration()      ; break;
+            case "600" : _201_samples_class._600_cli_food_db_a()          ; break;
             case  "q"  :                                                  ; break;
             case  "l"  : ListTestcases()                                  ; break;
             default  : Console.WriteLine("*** Invalid test numer ***"); break;
